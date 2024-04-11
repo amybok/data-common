@@ -8,7 +8,8 @@ import menu from "/src/assets/hamburger-menu-5.png"
 const Head = () => {
   return (
     <>
-      <header>
+      <header  style={{display: "flex", alignItems: "center", 
+            justifyContent: "space-between", paddingTop:"5px", paddingBottom:"5px"}}>
         <div className="head">
           <a href="https://www.wehi.edu.au">
             <img src={logoWEHI} width="114px" height="41px" className="logo" />
@@ -28,11 +29,6 @@ const Head = () => {
           <img src={menu} width="40px" />
         </div>
       </header>
-
-      <h1> Login to the Data Commons</h1>
-      <h4> Sign in to continue </h4>
-
-      <Login/>
 
     </>
   );
