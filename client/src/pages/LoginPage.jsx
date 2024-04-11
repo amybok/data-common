@@ -1,8 +1,12 @@
 import Login from "../components/Login.jsx"
+import Head from "../components/Head.jsx"
 
 const LoginPage = () => {
     return (
-        <Login/>
+        <div>
+            <Head/>
+            <Login/>
+        </div>
     )
 }
 
