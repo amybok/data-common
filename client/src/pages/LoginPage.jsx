@@ -1,6 +1,7 @@
 import Login from "../components/Login.jsx"
 import Head from "../components/Head.jsx"
 import illustration from "../assets/illustration.png"
+import LoginButton from "../components/LogInButton.jsx"
 
 const LoginPage = () => {
 
@@ -29,6 +30,9 @@ const LoginPage = () => {
                 <h3 style={style.h4}> Sign in to continue </h3>
                 <div style={{display:"flex", alignSelf:"center", justifyContent:"center"}}>
                     <Login/>
+                </div>
+                <div style={{display:"flex", alignSelf:"center", justifyContent:"center", paddingTop:"30px"}}>
+                    <LoginButton/>
                 </div>
             </div>
         </div>

@@ -18,7 +18,8 @@ const Login = () => {
       paddingLeft:"10px",
       paddingRight:"70px",
       paddingTop:"10px",
-      paddingBottom:"10px"
+      paddingBottom:"10px",
+      boxShadow: "inset 0px 5px 10px 0px rgba(0, 0, 0, 0.5)"
     },
   }
 
