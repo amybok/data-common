@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 // Layouts
 import Main from "./layouts/main";
+import LoginPage from "./pages/LoginPage";
 
 // Pages
 import DataSetPage from "./pages/DatasetPage";
@@ -12,11 +13,11 @@ const router = createBrowserRouter([
     element: <Main />,
     children: [
       {
-        path: "/pages",
-        element: <DataSetPage />,
-      },
-    ],
-  },
+        index: true,
+        element: <LoginPage/>
+      }
+    ]
+  }
 ]);
 
 function App() {
