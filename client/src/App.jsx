@@ -1,14 +1,11 @@
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-
-
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 // Layouts
 import Main from "./layouts/main";
 import LoginPage from "./pages/LoginPage";
 
+// Pages
+import DataSetPage from "./pages/DatasetPage";
 
 const router = createBrowserRouter([
   {
@@ -17,16 +14,23 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <LoginPage/>
-      }
-    ]
-  }
+        element: <LoginPage />,
+      },
+
+      {
+        path: "/pages",
+        element: <DataSetPage />,
+      },
+    ],
+  },
 ]);
 
 function App() {
-  return <div className="App">
-    <RouterProvider router={router} />
-  </div>;
+  return (
+    <div className="App">
+      <RouterProvider router={router} />
+    </div>
+  );
 }
 
 export default App;
