@@ -64,7 +64,7 @@ const LoginPage = () => {
           }}
         >
           <a href>
-            <button style={style.button} onClick={() => {}}>
+            <button style={style.button} onClick={() => console.log("Hi!")}>
               Login
             </button>
           </a>
