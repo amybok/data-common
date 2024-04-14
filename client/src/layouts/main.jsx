@@ -12,7 +12,6 @@ const Main = () => {
     <div className="layout">
         <Head/>
         <main>
-            <LoginPage/>
             <Outlet/>
         </main>
     </div>
