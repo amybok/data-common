@@ -14,10 +14,15 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <LoginPage/>
-      }
-    ]
-  }
+        element: <LoginPage />,
+      },
+
+      {
+        path: "/pages",
+        element: <DataSetPage />,
+      },
+    ],
+  },
 ]);
 
 function App() {
