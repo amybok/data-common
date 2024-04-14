@@ -7,12 +7,19 @@ import {
 
 // Layouts
 import Main from "./layouts/main";
+import LoginPage from "./pages/LoginPage";
 
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Main />
+    element: <Main />,
+    children: [
+      {
+        index: true,
+        element: <LoginPage/>
+      }
+    ]
   }
 ]);
 
