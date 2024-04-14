@@ -21,20 +21,7 @@ const LoginPage = () => {
       fontWeight: "300",
     },
 
-    button: {
-      marginTop: "20px",
-      padding: "7px",
-      paddingLeft: "110px",
-      paddingRight: "110px",
-      backgroundColor: "darkslategray",
-      color: "white",
-      fontFamily:
-        "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
-      fontWeight: "lighter",
-      borderRadius: "8px",
-      border: "none",
-    },
-  };
+};
 
   return (
     <div
