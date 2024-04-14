@@ -1,9 +1,8 @@
 import "./Head.css";
-import Login from "./Login.jsx"
 import logoWEHI from "/src/assets/logo@2x-compressed.webp";
-import searchBox from "/src/assets/search-svgrepo-com.svg";
 import clipArt from "/src/assets/PinClipart.com_male-clipart_1332476.png"
 import menu from "/src/assets/hamburger-menu-5.png"
+import SearchBox from "./SearchBox.jsx";
 
 const Head = () => {
   return (
@@ -18,10 +17,7 @@ const Head = () => {
         </div>
 
         <div className="icon_nav">
-          <div className="searchbox">
-            <div>Search</div>
-            <img src={searchBox} width='20px'/>
-          </div>
+          <SearchBox/>
           <img
             src={clipArt}
             width="30px"
