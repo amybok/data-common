@@ -1,15 +1,18 @@
 import express from "express";
+import Datasets from "../data/datasets.js"
 
 const datasetsApi = express.Router();
 
 async function findDataset(req, res, next){
-    let dataset
+    let dataset;
+    console.log(req.params.id);
+
     try {
-        dataset = await Datasets.findByID(req.params.id)
-        
-        if (!dataset){
+        dataset = await Datasets.find(req.params.id)
+        if (!dataset) {
             return res.status(404).json({ message: "Cannot find dataset" });
         }
+        
     } catch (e) {
         res.status(500).json({ message: e.message });
     }
@@ -19,11 +22,11 @@ async function findDataset(req, res, next){
 }
 
 
-datasetsApi.get("/", (req, res) => {
+datasetsApi.get("/api", (req, res) => {
     res.send("DatasetsApi successfully reached.");
 });
 
-datasetsApi.get("/getDatasetFromID/:id", findDataset, async(req, res) => {
+datasetsApi.get("/search", findDataset, (req, res) => {
     try {
         res.status(200).json(res.dataset);
     } catch (e) {

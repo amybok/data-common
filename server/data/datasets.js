@@ -1,4 +1,12 @@
-const datasetsDetails = [
+function datasetsDetailss(id, name, method){
+    return {
+        id: id,
+        name: name,
+        method: method
+    }
+}
+
+const datasets = [
     {
         id: "PDC001",
         name: "Whole-genome landscape of pancreatic neuroendocrine tumours - WGS",
@@ -23,3 +31,5 @@ const datasetsDetails = [
         method: "Spatial",
     }
 ]
+
+export default datasets
