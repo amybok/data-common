@@ -1,6 +1,12 @@
 import search from "/src/assets/search-svgrepo-com.svg";
+import React, { useState } from "react";
+
 
 const SearchBox = () => {
+
+    const [searchTerm, setSearchTerm] = useState('');
+    const [searchResults, setSearchResults] = useState([]);
+
 
     const style = {
         searchbox: {
@@ -28,11 +34,39 @@ const SearchBox = () => {
         }
     }
 
+    
+    const handleSearchChange = async (e) => {
+        const query = e.target.value;
+        setSearchTerm(query);
+        let cancel = false;
+
+        try {
+            const response = await fetch(`http://localhost:3000/datasets`);
+            const data = await response.json();
+            if (cancel) return
+            console.log(data)
+            setSearchResults(data);
+
+        }
+        catch (error) {
+            console.error('Error fetching autocomplete suggestions:', error);
+        }
+    }
+
     return (
-        <div className="wrapper">
-            <input placeholder="Search" style={style.searchbox}>
-            </input>
-            
+        <div>
+            <div className="wrapper">
+                <input placeholder="Search" style={style.searchbox} type="text" onChange={handleSearchChange} value={searchTerm}/>
+            </div>
+            {searchResults.length > 0 && (
+                <div className="results-container">
+                    {searchResults.map((result, index) => (
+                        <div key={index} className="result-item">
+                            {result}
+                        </div>
+                    ))}
+                </div>
+            )}
         </div>
     )
 }
