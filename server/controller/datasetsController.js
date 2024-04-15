@@ -1,38 +1,30 @@
 import express from "express";
-import Datasets from "../data/datasets.js"
+import datasets from "../data/datasets.js"
 
 const datasetsApi = express.Router();
 
-async function findDataset(req, res, next){
-    let dataset;
-    console.log(req.params.id);
-
-    try {
-        dataset = await Datasets.find(req.params.id)
-        if (!dataset) {
-            return res.status(404).json({ message: "Cannot find dataset" });
-        }
-        
-    } catch (e) {
-        res.status(500).json({ message: e.message });
-    }
-
-    res.dataset = dataset;
-    next();
-}
-
-
-datasetsApi.get("/api", (req, res) => {
-    res.send("DatasetsApi successfully reached.");
+// Create a route and a handler for GET /datasets
+datasetsApi.get('/', (req, res) => {
+    // Send the posts array as a JSON response
+    res.status(200).json(datasets);
 });
 
-datasetsApi.get("/search", findDataset, (req, res) => {
-    try {
-        res.status(200).json(res.dataset);
-    } catch (e) {
-        console.log(e);
-        res.status(404).end();
+// Create a route and a handler for GET /posts/:id
+datasetsApi.get('/:id', (req, res) => {
+    // Get the id parameter from the request
+    const id = req.params.id;
+
+    // Find the post with the given id in the posts array
+    const dataset = datasets.find((d) => d.id == id);
+
+    // If the post exists, send it as a JSON response
+    if (dataset) {
+        res.json(dataset);
+    } else {
+        // If the post does not exist, send a 404 status code and a message
+        res.status(404).send('Dataset not found');
     }
 });
+
 
 export default datasetsApi;
