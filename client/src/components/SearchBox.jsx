@@ -59,7 +59,10 @@ const SearchBox = () => {
                 <input placeholder="Search" style={style.searchbox} type="text" onChange={handleSearchChange} value={searchTerm}/>
                     <div className="results-container" style={{fontFamily:"Helvetica", fontWeight:"300"}}>
                         {console.log(searchResults)}
-                        {searchResults.id}
+                        <div style={{overflow: "hidden"}}>
+                            {searchResults.id + " "}
+                            {searchResults.name}
+                        </div>
                     </div>
             </div>
             
