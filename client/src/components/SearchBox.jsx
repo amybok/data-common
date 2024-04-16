@@ -41,33 +41,28 @@ const SearchBox = () => {
         let cancel = false;
 
         try {
-            const response = await fetch(`http://localhost:3000/datasets`);
+            const response = await fetch(`http://localhost:3000/api/datasets/${query}`);
+            console.log(response)
             const data = await response.json();
+            console.log(data);
             if (cancel) return
-            console.log(data)
             setSearchResults(data);
 
         }
         catch (error) {
-            console.error('Error fetching autocomplete suggestions:', error);
+            console.error('Error fetching dataset:', error);
         }
     }
 
     return (
-        <div>
             <div className="wrapper">
                 <input placeholder="Search" style={style.searchbox} type="text" onChange={handleSearchChange} value={searchTerm}/>
+                    <div className="results-container" style={{fontFamily:"Helvetica", fontWeight:"300"}}>
+                        {console.log(searchResults)}
+                        {searchResults.id}
+                    </div>
             </div>
-            {searchResults.length > 0 && (
-                <div className="results-container">
-                    {searchResults.map((result, index) => (
-                        <div key={index} className="result-item">
-                            {result}
-                        </div>
-                    ))}
-                </div>
-            )}
-        </div>
+            
     )
 }
 
