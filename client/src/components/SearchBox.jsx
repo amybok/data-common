@@ -1,5 +1,6 @@
 import search from "/src/assets/search-svgrepo-com.svg";
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 
 const SearchBox = () => {
@@ -59,10 +60,10 @@ const SearchBox = () => {
                 <input placeholder="Search" style={style.searchbox} type="text" onChange={handleSearchChange} value={searchTerm}/>
                     <div className="results-container" style={{fontFamily:"Helvetica", fontWeight:"300"}}>
                         {console.log(searchResults)}
-                        <div style={{overflow: "hidden"}}>
+                        <NavLink to={`/datasets/${searchResults.id}`}>
                             {searchResults.id + " "}
                             {searchResults.name}
-                        </div>
+                        </NavLink>
                     </div>
             </div>
             
