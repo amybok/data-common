@@ -4,7 +4,11 @@ import dotenv from 'dotenv';
 import api from "./routes.js"
 import datasets from "./data/datasets.js"
 
-const app = express()
+const app = express();
+app.use(cors({
+    origin: "http://localhost:5173",
+    methods: "GET,HEAD,PUT,P"
+}))
 
 app.use("/api", api);
 

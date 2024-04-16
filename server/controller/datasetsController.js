@@ -12,10 +12,12 @@ datasetsApi.get('/', (req, res) => {
 // Create a route and a handler for GET /posts/:id
 datasetsApi.get('/:id', (req, res) => {
     // Get the id parameter from the request
-    const id = req.params.id;
+    const rid = req.params.id;
+    
 
     // Find the post with the given id in the posts array
-    const dataset = datasets.find((d) => d.id == id);
+    const dataset = datasets.find((d) => d.id == rid);
+    console.log(dataset)
 
     // If the post exists, send it as a JSON response
     if (dataset) {
