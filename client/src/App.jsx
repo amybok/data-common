@@ -24,7 +24,7 @@ const router = createBrowserRouter([
       },
 
       {
-        path: "/view",
+        path: "/view/:id",
         element: <ViewDataPage/>
       }
     ],

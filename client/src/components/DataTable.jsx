@@ -1,9 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
 
 
-const DataTable = ({data}) => {
+const DataTable = ({ data }) => {
 
   const style = {
     h2: {
@@ -67,14 +66,16 @@ const DataTable = ({data}) => {
             <th style={style.entries}>Technology</th>
           </tr>
         </thead>
-        <tbody >
+        <tbody>
           {data.map((item) => (
             <tr>
               <th style={style.td}>{item.id}</th>
               <td style={style.entries_name}>{item.name}</td>
               <td style={style.entries_name}>{item.method}</td>
               <td style={style.td}>
-                <NavLink to="/view">
+                {/* <NavLink to={`/view/${item}`}> */}
+                {item != null ? console.log(item) : console.log("is empty")}
+                <NavLink to={`/view/${item.id}`} state={{data:item}}>
                   <button style={style.button}>VIEW</button>
                 </NavLink>
               </td>

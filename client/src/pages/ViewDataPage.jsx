@@ -1,6 +1,10 @@
 import React from "react";
+import { useLocation, NavLink } from "react-router-dom";
 
 const ViewPage = () => {
+  let { state } = useLocation();
+  console.log(state);
+
   const style = {
     h2: {
       fontFamily: "Roboto",
@@ -56,9 +60,7 @@ const ViewPage = () => {
   };
   return (
     <div>
-      <h2 style={style.h2}>
-        Whole-genome landscape of pancreatic neuroendocrine tumours
-      </h2>
+      <h2 style={style.h2}>{state.data.name}</h2>
 
       <div
         style={{
@@ -71,7 +73,7 @@ const ViewPage = () => {
         className="dataset-title"
       >
         <div style={style.dataset_info} className="dataset-info">
-          <h3 style={style.h3}>PDC001</h3>
+          <h3 style={style.h3}>Description</h3>
           <p style={style.p} className="dataset-summary">
             The diagnosis of pancreatic neurod is increasing owing to more
             sensitive detection method
