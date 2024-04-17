@@ -6,6 +6,7 @@ import LoginPage from "./pages/LoginPage";
 
 // Pages
 import DataSetPage from "./pages/DatasetPage";
+import ViewDataPage from "./pages/ViewDataPage"
 
 const router = createBrowserRouter([
   {
@@ -19,9 +20,14 @@ const router = createBrowserRouter([
       },
 
       {
-        path: "/pages",
+        path: "/dataset",
         element: <DataSetPage />,
       },
+
+      {
+        path: "/view",
+        element: <ViewDataPage/>
+      }
     ],
   },
 ]);

@@ -16,7 +16,7 @@ const LoginButton = () => {
 
     return (
         <div className="LoginButton">
-            <NavLink to={"/"}>
+            <NavLink to={"/dataset"}>
                 <button style={style.button}>
                     Log In
                 </button>
