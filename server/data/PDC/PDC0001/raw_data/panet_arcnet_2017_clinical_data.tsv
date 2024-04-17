@@ -1,0 +1,99 @@
+Patient ID	Sample ID	Overall patient survival status.	Mutation Count	Diagnosis Age	Sex	Ethnicity Category	Country	Drinker	ENETS Staging	ENETS T-Staging	Extra-Panc Spread	Familial Syndrome	Functional	M Stage	N Stage	Neoplasm American Joint Committee on Cancer Clinical Group Stage	Overall Patient Histology	Overall patient survival status.
+ICGC_0425	QCMG-66-ICGC_0425-ICGC-ABMB-20120905-002	0:LIVING	11	69	Male	White/Caucasian	Australia	Daily Drinker	IIb	3	Absent	No	No	0	0	IB	Neuroendocrine Tumour- Unspecified	0:LIVING
+ICGC_0427	QCMG-66-ICGC_0427-ICGC-ABMB-20120905-004	0:LIVING	6	48	Male	White/Caucasian	Australia	Social Drinker	IIb	3	Absent	No	Yes	0	0	IB	Neuroendocrine Tumour- VIPoma	0:LIVING
+ICGC_0428	QCMG-66-ICGC_0428-ICGC-ABMB-20120905-005	1:DECEASED	18	74	Male	Black/African	Australia	No History of Chronic consumption	IIb	3	Absent	No	No	0	0	IB	Neuroendocrine Tumour- Unspecified	1:DECEASED
+ICGC_0431	QCMG-66-ICGC_0431-ICGC-ABMB-20130711-001	0:LIVING	27	78	Male	White/Caucasian	Australia	Daily Drinker	IIIb	2	Absent	No	Yes	0	1	IIB	Neuroendocrine Tumour- Gastrinoma	0:LIVING
+ICGC_0432	QCMG-66-ICGC_0432-ICGC-ABMB-20120905-010	1:DECEASED	19	76	Male	White/Caucasian	Australia	Daily Drinker	IIIb	4	Present	No	No	0	1	IIB	Neuroendocrine Tumour- Unspecified	1:DECEASED
+ICGC_0433	QCMG-66-ICGC_0433-ICGC-ABMB-20120905-011	0:LIVING	38	59	Female	White/Caucasian	Australia	No History of Chronic consumption	IIIa	4	Present	No	No	0	0	IIA	Neuroendocrine Tumour- Unspecified	0:LIVING
+ICGC_0434	QCMG-66-ICGC_0434-ICGC-ABMB-20120905-012	1:DECEASED	19	59	Male	White/Caucasian	Australia	Weekly Drinker	IIIa	4	Present	No	No	0	0	IIA	Neuroendocrine Tumour- PPoma	1:DECEASED
+ICGC_0435	QCMG-66-ICGC_0435-ICGC-ABMB-20120905-013	0:LIVING	30	66	Male	White/Caucasian	Australia	Weekly Drinker	IIIb	4	Present	No	No	0	1	IIB	Neuroendocrine Tumour- Unspecified	0:LIVING
+ICGC_0436	QCMG-66-ICGC_0436-ICGC-ABMB-20120905-087	0:LIVING	38	61	Male	White/Caucasian	Australia	Daily Drinker	IIIb	4	Present	No	No	0	1	IIB	Neuroendocrine Tumour- Unspecified	0:LIVING
+ICGC_0437	QCMG-66-ICGC_0437-ICGC-ABMB-20120905-014	0:LIVING	28	67	Female	White/Caucasian	Australia	Daily Drinker	IIa	2	Absent	No	Yes	0	Not documented	IB	Neuroendocrine Tumour- Insulinoma	0:LIVING
+ICGC_0438	QCMG-66-ICGC_0438-ICGC-ABMB-20120905-015	0:LIVING	30	79	Male	White/Caucasian	Australia	Weekly Drinker	IV	4	Present	No	No	1	1	IV	Neuroendocrine Tumour- Unspecified	0:LIVING
+ICGC_0439	QCMG-66-ICGC_0439-ICGC-ABMB-20120905-016	0:LIVING	12	38	Female	White/Caucasian	Australia	Social Drinker	IIIb	4	Present	No	No	0	1	IIB	Neuroendocrine Tumour- Unspecified	0:LIVING
+ICGC_0440	QCMG-66-ICGC_0440-ICGC-ABMB-20120905-018	0:LIVING	10	65	Female	White/Caucasian	Australia	No History of Chronic consumption	IIa	2	Absent	No	Yes	0	0	IB	Neuroendocrine Tumour- Insulinoma	0:LIVING
+ICGC_0441	QCMG-66-ICGC_0441-ICGC-ABMB-20120905-019	0:LIVING	37	69	Female	White/Caucasian	Australia	No History of Chronic consumption	IIb	3	Absent	No	No	0	0	IB	Neuroendocrine Tumour- Unspecified	0:LIVING
+ICGC_0443	QCMG-66-ICGC_0443-ICGC-ABMB-20120905-021	0:LIVING	21	59	Female	White/Caucasian	Australia	No History of Chronic consumption	IIb	3	Absent	No	No	0	0	IB	Neuroendocrine Tumour- Unspecified	0:LIVING
+ICGC_0446	QCMG-66-ICGC_0446-ICGC-ABMB-20120905-024	0:LIVING	6	45	Female	White/Caucasian	Australia	No History of Chronic consumption	IIa	2	Absent	No	No	0	0	IB	Neuroendocrine Tumour- Clear cell	0:LIVING
+ICGC_0447	QCMG-66-ICGC_0447-ICGC-ABMB-20120905-025	0:LIVING	9	44	Female	White/Caucasian	Australia	No History of Chronic consumption	I	1	Absent	Yes	No	0	0	IA	Neuroendocrine Tumour- Unspecified	0:LIVING
+ICGC_0449	QCMG-66-ICGC_0449-ICGC-ABMB-20120905-027	0:LIVING	17	81	Male	White/Caucasian	Australia	No History of Chronic consumption	I	1	Absent	No	No	0	0	IA	Neuroendocrine Tumour- Unspecified	0:LIVING
+ICGC_0452	QCMG-66-ICGC_0452-ICGC-ABMB-20120905-031	0:LIVING	65	77	Male	White/Caucasian	Australia	Daily Drinker	IIIa	4	Present	No	No	0	0	IIA	Neuroendocrine Tumour- Unspecified	0:LIVING
+ICGC_0453	QCMG-66-ICGC_0453-ICGC-ABMB-20121220-059	0:LIVING	6	56	Male	White/Caucasian	Australia	Daily Drinker	IIb	3	Absent	No	No	0	0	IB	Neuroendocrine Tumour- Unspecified	0:LIVING
+ICGC_0455	QCMG-66-ICGC_0455-ICGC-ABMB-20121220-065	0:LIVING	91	78	Male	Asian	Australia	Social Drinker	IIIb	4	Present	No	No	0	1	IIB	Neuroendocrine Carcinoma - Well Differentiated	0:LIVING
+ICGC_0456	QCMG-66-ICGC_0456-ICGC-ABMB-20121220-068	0:LIVING	21	59	Male	Asian	Australia	No History of Chronic consumption	IIb	3	Absent	No	No	0	0	IB	Neuroendocrine Tumour- Unspecified	0:LIVING
+ICGC_0457	QCMG-66-ICGC_0457-ICGC-ABMB-20131023-012	1:DECEASED	45	38	Male	White/Caucasian	Australia	No History of Chronic consumption	IV	4	Present	No	No	1	1	IV	Neuroendocrine Carcinoma - Well Differentiated	1:DECEASED
+ICGC_0459	QCMG-66-ICGC_0489-ICGC-ABMB-20131107-095	0:LIVING	16	56	Male	Not documented	Australia	No History of Chronic consumption	I	1	Absent	No	Yes	0	0	IA	Neuroendocrine Tumour- Insulinoma	0:LIVING
+ICGC_0489	QCMG-66-ICGC_0459-ICGC-ABMB-20131023-019	0:LIVING	10	68	Male	White/Caucasian	Australia	No History of Chronic consumption	IIa	2	Absent	No	No	0	0	IB	Neuroendocrine Tumour- Unspecified	0:LIVING
+ICGC_0491	QCMG-66-ICGC_0491-ICGC-ABMB-20131107-105	0:LIVING	9	64	Male	White/Caucasian	Australia	Weekly Drinker	I	1	Absent	No	No	0	0	IA	Neuroendocrine Tumour- Unspecified	0:LIVING
+ICGC_0492	QCMG-66-ICGC_0492-ICGC-ABMB-20131107-108	0:LIVING	2	38	Male	White/Caucasian	Australia	No History of Chronic consumption	IIIb	3	Absent	No	No	0	1	IIB	Neuroendocrine Tumour- Unspecified	0:LIVING
+ICGC_0497	QCMG-66-ICGC_0497-ICGC-ABMB-20131107-124	0:LIVING	24	71	Male	White/Caucasian	Australia	Daily Drinker	IIIb	4	Present	No	No	0	1	IIB	Neuroendocrine Tumour- Unspecified	0:LIVING
+ICGC_0498	QCMG-66-ICGC_0500-ICGC-ABMB-20131120-011	0:LIVING	10	59	Female	White/Caucasian	Australia	No History of Chronic consumption	IIIb	3	Absent	No	No	0	1	IIB	Neuroendocrine Tumour- Unspecified	0:LIVING
+ICGC_0500	QCMG-66-ICGC_0498-ICGC-ABMB-20131107-127	0:LIVING	24	75	Female	White/Caucasian	Australia	No History of Chronic consumption	I	1	Absent	No	No	0	0	IA	Neuroendocrine Tumour- Unspecified	0:LIVING
+ICGC_0501	QCMG-66-ICGC_0501-ICGC-ABMB-20131120-014	0:LIVING	43	64	Male	White/Caucasian	Australia	Daily Drinker	IIIa	4	Present	No	No	0	0	IIA	Neuroendocrine Tumour- Unspecified	0:LIVING
+ITNET_0020	QCMG-66-ITNET_0020-SMGres-ASRL-20131114-024	1:DECEASED	36	44	Male	White/Caucasian	Italy	No History of Chronic consumption	IV	4	Present	No	No	1	1	IV	Neuroendocrine Tumour- Unspecified	1:DECEASED
+ITNET_0026	QCMG-66-ITNET_0026-SMGres-ASRL-20131114-022		6	43	Female	White/Caucasian	Italy	No History of Chronic consumption	IIa	2	Present	No	No	0	0	IB	Neuroendocrine Tumour- Unspecified	
+ITNET_0028	QCMG-66-ITNET_0028-SMGres-ASRL-20131114-010	0:LIVING	6	56	Male	White/Caucasian	Italy	No History of Chronic consumption	IV	4	Present	No	No	1	1	IV	Neuroendocrine Tumour- Unspecified	0:LIVING
+ITNET_0052	QCMG-66-ITNET_0052-SMGres-ASRL-20131114-002	1:DECEASED	134	53	Male	White/Caucasian	Italy	No History of Chronic consumption	IV	3	Present	No	No	1	1	IV	Neuroendocrine Tumour- Unspecified	1:DECEASED
+ITNET_0087	QCMG-66-ITNET_0087-SMGres-ASRL-20131114-018	1:DECEASED	24	79	Male	White/Caucasian	Italy	No History of Chronic consumption	IIb	3	Present	No	Yes	0	0	IB	Neuroendocrine Tumour- Glucagonoma	1:DECEASED
+ITNET_0100	QCMG-66-ITNET_0100-SMGres-ASRL-20131114-020	0:LIVING	85	50	Male	White/Caucasian	Italy	No History of Chronic consumption	IIb	3	Absent	No	No	0	0	IB	Neuroendocrine Tumour- Unspecified	0:LIVING
+ITNET_0107	QCMG-66-ITNET_0107-SMGres-ASRL-20131114-008	0:LIVING	9	41	Female	White/Caucasian	Italy	No History of Chronic consumption	IIIb	3	Absent	Yes	No	0	1	IIB	Neuroendocrine Tumour- Unspecified	0:LIVING
+ITNET_0118	QCMG-66-ITNET_0118-SMGres-ASRL-20131114-028	0:LIVING	10	41	Male	White/Caucasian	Italy	No History of Chronic consumption	IV	3	Absent	No	Yes	1	1	IV	Neuroendocrine Tumour- Gastrinoma	0:LIVING
+ITNET_0124	QCMG-66-ITNET_0124-SMGres-ASRL-20131114-016	0:LIVING	82	46	Female	White/Caucasian	Italy	No History of Chronic consumption	IIIa	4	Present	No	No	0	0	IIA	Neuroendocrine Tumour- Unspecified	0:LIVING
+ITNET_0128	QCMG-66-ITNET_0128-SMGres-ASRL-20131114-004	0:LIVING	17	38	Male	White/Caucasian	Italy	No History of Chronic consumption	IV	3	Present	No	No	1	1	IV	Neuroendocrine Tumour- Unspecified	0:LIVING
+ITNET_0134	QCMG-66-ITNET_0134-SMGres-ASRL-20131114-006	1:DECEASED	30	70	Female	White/Caucasian	Italy	No History of Chronic consumption	IV	4	Present	No	No	1	1	IV	Neuroendocrine Carcinoma - Well Differentiated	1:DECEASED
+ITNET_0144	QCMG-66-ITNET_0144-SMGres-ASRL-20131114-034	0:LIVING	15	71	Male	White/Caucasian	Italy	No History of Chronic consumption	IIIb	3	Absent	No	No	0	1	IB	Neuroendocrine Tumour- Unspecified	0:LIVING
+ITNET_0148	QCMG-66-ITNET_0148-SMGres-ASRL-20131114-030	0:LIVING	16	46	Female	White/Caucasian	Italy	Daily Drinker	IIb	3	Present	No	No	0	0	IB	Neuroendocrine Tumour- Unspecified	0:LIVING
+ITNET_0151	QCMG-66-ITNET_0151-SMGres-ASRL-20131114-032	0:LIVING	21	70	Female	White/Caucasian	Italy	Daily Drinker	IIIb	4	Present	No	No	0	1	IIB	Neuroendocrine Tumour- Unspecified	0:LIVING
+ITNET_0152	QCMG-66-ITNET_0152-SMGres-ASRL-20131114-036	1:DECEASED	16	30	Female	White/Caucasian	Italy	No History of Chronic consumption	IV	4	Present	No	No	1	1	IV	Neuroendocrine Tumour- Unspecified	1:DECEASED
+ITNET_0673	QCMG-66-ITNET_0673-SMGres-ASRL-20131114-070	0:LIVING	17	61	Female	White/Caucasian	Italy	No History of Chronic consumption	IIIb	2	Present	No	No	0	1	IIB	Neuroendocrine Tumour- Unspecified	0:LIVING
+ITNET_0681	QCMG-66-ITNET_0681-SMGres-ASRL-20131114-056	0:LIVING	2	63	Male	White/Caucasian	Italy	Weekly Drinker	IIIb	4	Present	No	No	0	1	IIB	Neuroendocrine Tumour- Unspecified	0:LIVING
+ITNET_0695	QCMG-66-ITNET_0695-SMGres-ASRL-20131114-072	0:LIVING	11	46	Female	White/Caucasian	Italy	No History of Chronic consumption	I	1	Absent	No	No	0	0	IA	Neuroendocrine Tumour- Unspecified	0:LIVING
+ITNET_0700	QCMG-66-ITNET_0700-SMGres-ASRL-20131114-058	0:LIVING	18	62	Female	White/Caucasian	Italy	No History of Chronic consumption	IIb	3	Absent	No	No	0	0	IB	Neuroendocrine Tumour- Unspecified	0:LIVING
+ITNET_0783	QCMG-66-ITNET_0783-SMGres-ASRL-20131114-074	0:LIVING	34	59	Male	White/Caucasian	Italy	Daily Drinker	IIa	2	Absent	No	No	0	0	IB	Neuroendocrine Tumour- Unspecified	0:LIVING
+ITNET_0797	QCMG-66-ITNET_0797-SMGres-ASRL-20131114-060	0:LIVING	17	71	Male	White/Caucasian	Italy	No History of Chronic consumption	IIb	3	Absent	No	No	0	0	IB	Neuroendocrine Tumour- Unspecified	0:LIVING
+ITNET_0813	QCMG-66-ITNET_0813-SMGres-ASRL-20131114-064	0:LIVING	33	75	Male	White/Caucasian	Italy	Weekly Drinker	IIIb	2	Present	No	No	0	1	IIB	Neuroendocrine Tumour- Unspecified	0:LIVING
+ITNET_0833	QCMG-66-ITNET_0833-SMGres-ASRL-20131114-066	0:LIVING	14	48	Male	White/Caucasian	Italy	Weekly Drinker	IIa	2	Absent	No	No	0	0	IB	Neuroendocrine Tumour- Unspecified	0:LIVING
+ITNET_0850	QCMG-66-ITNET_0850-SMGres-ASRL-20131114-068	0:LIVING	0	64	Male	White/Caucasian	Italy	No History of Chronic consumption	I	1	Absent	No	No	0	0	IA	Neuroendocrine Tumour- Unspecified	0:LIVING
+ITNET_0900	QCMG-66-ITNET_0900-SMGres-ASRL-20131114-076	0:LIVING	17	66	Female	White/Caucasian	Italy	No History of Chronic consumption	IIIb	3	Absent	No	No	0	1	IIB	Neuroendocrine Tumour- Unspecified	0:LIVING
+ITNET_0935	QCMG-66-ITNET_0935-SMGres-ASRL-20131114-080	0:LIVING	28	40	Male	White/Caucasian	Italy	Weekly Drinker	IV	3	Present	No	No	1	1	IV	Neuroendocrine Tumour- Unspecified	0:LIVING
+ITNET_0938	QCMG-66-ITNET_0938-SMGres-ASRL-20131114-082	0:LIVING	125	56	Male	White/Caucasian	Italy	Daily Drinker	IIIb	4	Present	No	No	0	1	IIB	Neuroendocrine Tumour- Unspecified	0:LIVING
+ITNET_0941	QCMG-66-ITNET_0941-SMGres-ASRL-20131114-088	0:LIVING	13	54	Female	White/Caucasian	Italy	No History of Chronic consumption	IIa	2	Absent	No	Yes	0	0	IB	Neuroendocrine Tumour- Insulinoma	0:LIVING
+ITNET_0962	QCMG-66-ITNET_0962-SMGres-ASRL-20131114-084	0:LIVING	6	57	Male	White/Caucasian	Italy	No History of Chronic consumption	IIa	2	Absent	No	No	0	0	IB	Neuroendocrine Tumour- Unspecified	0:LIVING
+ITNET_0968	QCMG-66-ITNET_0968-SMGres-ASRL-20131114-090	0:LIVING	10	71	Male	White/Caucasian	Italy	Weekly Drinker	IIa	2	Absent	No	No	0	0	IB	Neuroendocrine Tumour- Unspecified	0:LIVING
+ITNET_0993	QCMG-66-ITNET_0993-SMGres-ASRL-20131114-092	1:DECEASED	11	59	Male	White/Caucasian	Italy	No History of Chronic consumption	IV	2	Absent	No	Yes	1	0	IV	Neuroendocrine Carcinoma - Well Differentiated	1:DECEASED
+ITNET_1000	QCMG-66-ITNET_1000-SMGres-ASRL-20131114-094	0:LIVING	22	52	Male	White/Caucasian	Italy	Weekly Drinker	IV	3	Absent	No	No	1	1	IV	Neuroendocrine Tumour- Unspecified	0:LIVING
+ITNET_1001	QCMG-66-ITNET_1001-SMGres-ASRL-20131114-096	0:LIVING	6	54	Male	White/Caucasian	Italy	No History of Chronic consumption	I	1	Absent	No	Yes	0	0	IA	Neuroendocrine Tumour- Insulinoma	0:LIVING
+ITNET_1027	QCMG-66-ITNET_1027-SMGres-ASRL-20131114-098	0:LIVING	13	50	Male	White/Caucasian	Italy	Weekly Drinker	IIIa	4	Present	No	No	0	0	IIA	Neuroendocrine Tumour- Unspecified	0:LIVING
+ITNET_1047	QCMG-66-ITNET_1047-SMGres-ASRL-20131114-102	1:DECEASED	70	68	Male	White/Caucasian	Italy	No History of Chronic consumption	IIIb	4	Present	No	No	0	1	IIB	Neuroendocrine Carcinoma - Well/Poorly Differentiated	1:DECEASED
+ITNET_1050	QCMG-66-ITNET_1050-SMGres-ASRL-20131114-104	0:LIVING	3	20	Female	White/Caucasian	Italy	No History of Chronic consumption	IIIb	2	Absent	No	No	0	1	IIB	Neuroendocrine Tumour- Unspecified	0:LIVING
+ITNET_1053	QCMG-66-ITNET_1053-SMGres-ASRL-20131114-106	0:LIVING	27	55	Male	White/Caucasian	Italy	No History of Chronic consumption	IIIa	4	Present	No	No	0	0	IIA	Neuroendocrine Tumour- Unspecified	0:LIVING
+ITNET_1081	QCMG-66-ITNET_1081-SMGRES-ASRL-20131106-002	0:LIVING	5	35	Male	White/Caucasian	Italy	No History of Chronic consumption	IV	3	Present	No	No	1	1	IV	Neuroendocrine Tumour- Unspecified	0:LIVING
+ITNET_1257	QCMG-66-ITNET_1257-SMGRES-ASRL-20131106-004	0:LIVING	27	41	Male	White/Caucasian	Italy	No History of Chronic consumption	IIIb	3	Present	No	No	0	1	IIB	Neuroendocrine Tumour- Unspecified	0:LIVING
+ITNET_1265	QCMG-66-ITNET_1265-SMGRES-ASRL-20131106-010	0:LIVING	19	74	Female	White/Caucasian	Italy	No History of Chronic consumption	IIIb	3	Present	No	No	0	1	IIB	Neuroendocrine Tumour- Unspecified	0:LIVING
+ITNET_1266	QCMG-66-ITNET_1266-SMGRES-ASRL-20131106-012	0:LIVING	25	62	Male	White/Caucasian	Italy	Weekly Drinker	IIIb	1	Present	No	No	0	1	IIB	Neuroendocrine Tumour- Unspecified	0:LIVING
+ITNET_1270	QCMG-66-ITNET_1270-SMGRES-ASRL-20131106-014	0:LIVING	3	39	Female	White/Caucasian	Italy	No History of Chronic consumption	I	1	Absent	No	No	0	0	IA	Neuroendocrine Tumour- Unspecified	0:LIVING
+ITNET_1273	QCMG-66-ITNET_1273-SMGRES-ASRL-20131106-016	0:LIVING	5	63	Male	White/Caucasian	Italy	Not documented	IIb	3	Absent	No	No	0	0	IB	Neuroendocrine Tumour- Unspecified	0:LIVING
+ITNET_1286	QCMG-66-ITNET_1286-SMGRES-ASRL-20131106-020	1:DECEASED	17	71	Female	White/Caucasian	Italy	No History of Chronic consumption	I	1	Absent	No	No	0	0	IA	Neuroendocrine Tumour- Unspecified	1:DECEASED
+ITNET_1288	QCMG-66-ITNET_1288-SMGRES-ASRL-20131106-022	0:LIVING	15	64	Female	White/Caucasian	Italy	No History of Chronic consumption	IV	3	Absent	No	No	1	1	IV	Neuroendocrine Tumour- Unspecified	0:LIVING
+ITNET_1293	QCMG-66-ITNET_1293-SMGRES-ASRL-20131106-024	0:LIVING	13	36	Male	White/Caucasian	Italy	No History of Chronic consumption	IIIb	3	Absent	No	No	0	1	IIB	Neuroendocrine Tumour- Unspecified	0:LIVING
+ITNET_1301	QCMG-66-ITNET_1301-SMGRES-ASRL-20131106-026	1:DECEASED	12	53	Male	White/Caucasian	Italy	Not documented	IV	3	Present	No	No	1	1	IV	Neuroendocrine Tumour- Unspecified	1:DECEASED
+ITNET_1304	QCMG-66-ITNET_1304-SMGRES-ASRL-20131106-028	0:LIVING	13	64	Male	White/Caucasian	Italy	Weekly Drinker	I	1	Absent	No	No	0	0	IA	Neuroendocrine Tumour- Unspecified	0:LIVING
+ITNET_1308	QCMG-66-ITNET_1308-SMGRES-ASRL-20131106-030	1:DECEASED	58	56	Male	White/Caucasian	Italy	Not documented	IV	4	Present	No	No	1	1	IV	Neuroendocrine Tumour- Unspecified	1:DECEASED
+ITNET_1309	QCMG-66-ITNET_1309-SMGRES-ASRL-20131106-032	0:LIVING	4	26	Female	White/Caucasian	Italy	No History of Chronic consumption	IV	2	Absent	No	No	1	1	IV	Neuroendocrine Tumour- Insulinoma	0:LIVING
+ITNET_1312	QCMG-66-ITNET_1312-SMGRES-ASRL-20131106-036	1:DECEASED	37	50	Male	White/Caucasian	Italy	Social Drinker	IV	4	Present	No	No	1	1	IV	Neuroendocrine Tumour- Unspecified	1:DECEASED
+ITNET_1314	QCMG-66-ITNET_1314-SMGRES-ASRL-20131106-038	0:LIVING	14	34	Female	White/Caucasian	Italy	No History of Chronic consumption	IIIb	3	Absent	Yes	No	0	1	IIB	Neuroendocrine Tumour- Unspecified	0:LIVING
+ITNET_1317	QCMG-66-ITNET_1317-SMGRES-ASRL-20131106-040	0:LIVING	2	17	Male	White/Caucasian	Italy	Not documented	IIa	2	Absent	No	Yes	0	0	IB	Neuroendocrine Tumour- Insulinoma	0:LIVING
+ITNET_1320	QCMG-66-ITNET_1320-SMGRES-ASRL-20131106-042	0:LIVING	30	69	Female	White/Caucasian	Italy	No History of Chronic consumption	IIIa	4	Present	No	No	0	1	III	Neuroendocrine Tumour- Unspecified	0:LIVING
+NE_0010	QCMG-66-NE_0010-ICGC-MGLP-20131004-004	0:LIVING	4	40	Male	Black/African	United States of America	No History of Chronic consumption	IIIa	4	Present	No	Yes	0	0	IIA	Neuroendocrine Tumour- Insulinoma	0:LIVING
+NE_0012	QCMG-66-NE_0012-ICGC-MGLP-20131004-006	0:LIVING	15	46	Male	White/Caucasian	United States of America	No History of Chronic consumption	IIb	3	Absent	No	No	0	0	IB	Neuroendocrine Tumour- Unspecified	0:LIVING
+NE_0017	QCMG-66-NE_0017-ICGC-MGLP-20131004-008	0:LIVING	12	62	Male	White/Caucasian	United States of America	Weekly Drinker	IIa	2	Absent	No	No	0	0	IB	Neuroendocrine Tumour- Unspecified	0:LIVING
+NE_0018	QCMG-66-NE_0018-ICGC-MGLP-20131004-010	0:LIVING	12	55	Male	White/Caucasian	United States of America	Daily Drinker	IIa	2	Absent	No	No	0	0	IB	Neuroendocrine Tumour- Unspecified	0:LIVING
+NE_0020	QCMG-66-NE_0020-ICGC-MGLP-20131004-012	0:LIVING	21	76	Female	White/Caucasian	United States of America	Social Drinker	IIa	2	Absent	No	No	0	0	IB	Neuroendocrine Tumour- Unspecified	0:LIVING
+NE_0021	QCMG-66-NE_0021-ICGC-MGLP-20131004-014	0:LIVING	25	70	Male	White/Caucasian	United States of America	Social Drinker	IIIa	4	Present	No	No	0	0	IIA	Neuroendocrine Tumour- Unspecified	0:LIVING
+NE_0025	QCMG-66-NE_0025-ICGC-MGLP-20131004-018	0:LIVING	10	66	Female	White/Caucasian	United States of America	Social Drinker	IIa	2	Absent	No	No	0	0	IB	Neuroendocrine Tumour- Unspecified	0:LIVING
+NE_0026	QCMG-66-NE_0026-ICGC-MGLP-20131004-020	0:LIVING	28	87	Male	White/Caucasian	United States of America	Social Drinker	IIIb	4	Present	No	No	0	1	IIB	Neuroendocrine Tumour- Unspecified	0:LIVING
+NE_0027	QCMG-66-NE_0027-ICGC-MGLP-20131004-022	0:LIVING	10	52	Female	Black/African	United States of America	No History of Chronic consumption	IIIb	2	Absent	No	No	0	1	IIB	Neuroendocrine Tumour- Unspecified	0:LIVING
+NE_0028	QCMG-66-NE_0028-ICGC-MGLP-20131004-024	0:LIVING	5	54	Female	Black/African	United States of America	No History of Chronic consumption	IIIb	4	Present	No	No	0	1	IIB	Neuroendocrine Tumour- Unspecified	0:LIVING
+NE_0032	QCMG-66-NE_0032-ICGC-MGLP-20131004-028	0:LIVING	9	65	Male	White/Caucasian	United States of America	Social Drinker	I	1	Absent	No	Yes	0	Not documented	IA	Neuroendocrine Tumour- Unspecified	0:LIVING
+NE_0033	QCMG-66-NE_0033-ICGC-MGLP-20131004-030	0:LIVING	91	52	Female	Black/African	United States of America	Social Drinker	IIIb	4	Present	No	No	0	1	IIB	Neuroendocrine Tumour- Unspecified	0:LIVING
+NE_0038	QCMG-66-NE_0038-ICGC-MGLP-20131004-032	0:LIVING	17	64	Male	Pacific Islander	United States of America	No History of Chronic consumption	IIIa	4	Present	No	No	0	0	IIA	Neuroendocrine Tumour- Unspecified	0:LIVING
