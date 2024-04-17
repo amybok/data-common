@@ -1,9 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import DataTable from "../components/DataTable";
 import Filter
- from "../components/Filter";
+from "../components/Filter";
+
 const DatasetPage = () => {
-  const style = {};
+  const [entries, setEntries] = useState([]);
+
+  useEffect (() => {
+    getData();
+  }, [])
+
+  const getData = async() => {
+    try {
+      const response = await fetch("http://localhost:3000/api/datasets")
+      const data = await response.json()
+      console.log(data)
+      setEntries(data)
+    } catch (error) {
+      console.error("Error fetching dataset::", error)
+    }
+  }
+
+
   return (
     <div
       style={{
@@ -12,7 +30,7 @@ const DatasetPage = () => {
         padding: "50px",
       }}
     >
-      <DataTable/>
+      <DataTable data={entries}/>
       <Filter/>
     </div>
   );
