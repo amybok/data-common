@@ -1,5 +1,6 @@
 import express from "express";
 import datasets from "../data/datasets.js"
+import bodyParser from "body-parser";
 
 const datasetsApi = express.Router();
 
@@ -10,6 +11,7 @@ datasetsApi.get('/', (req, res) => {
 });
 
 // Create a route and a handler for GET /datasets/:id
+// Could write an extra one that use req.query.id to use autocomplete for search
 datasetsApi.get('/:id', (req, res) => {
     // Get the id parameter from the request
     const rid = req.params.id;
@@ -29,13 +31,15 @@ datasetsApi.get('/:id', (req, res) => {
 });
 
 // Create a route and a handler for POST /datasets
-datasetsApi.post((req, res) => {
+datasetsApi.post("/", (req, res) => {
     // To handle the request body, we need to use a middleware called express.json
     // This middleware parses the request body as JSON and adds it to the req object
-    app.use(express.json());
+    datasetsApi.use(express.json());
     
     // Get the data from the request body
     const data = req.body;
+
+    console.log(data)
 
     // Validate the data
     if (data.name && data.method) {
@@ -56,3 +60,7 @@ datasetsApi.post((req, res) => {
 
 
 export default datasetsApi;
+
+
+
+//continue this body parser thing because rn req.body is undefined
