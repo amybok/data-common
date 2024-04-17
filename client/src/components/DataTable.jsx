@@ -1,9 +1,10 @@
 import React from "react";
-import { data } from "../data/data.js";
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 
-const DataTable = () => {
-  console.log(data);
+
+const DataTable = ({data}) => {
+
   const style = {
     h2: {
       fontFamily: "Roboto",
@@ -47,12 +48,12 @@ const DataTable = () => {
       color: "white",
     },
 
-
     td: {
       paddingLeft: "10px",
       paddingRight: "10px",
     },
   };
+
   return (
     <>
       <table style={style.table}>
@@ -66,16 +67,12 @@ const DataTable = () => {
             <th style={style.entries}>Technology</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody >
           {data.map((item) => (
             <tr>
-              {/* <th style={style.entries}>PDC0001</th> */}
               <th style={style.td}>{item.id}</th>
-              {/* <td style={style.entries_name}>
-                Whole-genome landscape of pancreatic neurodocrine tumors - WGS
-              </td> */}
-              <td style={style.entries_name}>{item.summary}</td>
-              <td style={style.entries_name}>{item.technology}</td>
+              <td style={style.entries_name}>{item.name}</td>
+              <td style={style.entries_name}>{item.method}</td>
               <td style={style.td}>
                 <NavLink to="/view">
                   <button style={style.button}>VIEW</button>

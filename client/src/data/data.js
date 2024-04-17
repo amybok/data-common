@@ -13,10 +13,5 @@ export const data = [
       "Whole-genome landscape of pancreatic neuroendocrine tumours - Lattice Light Sheet",
     technology: "LLS",
   },
-  {
-    id: "PDC0003",
-    summary:
-      "Whole-genome landscape of pancreatic neuroendocrine tumours - Lattice Light Sheet",
-    technology: "LLS",
-  },
+
 ];
