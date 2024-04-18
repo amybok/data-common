@@ -76,7 +76,7 @@ const DataTable = ({ data }) => {
               <td style={style.td}>
                 {/* <NavLink to={`/view/${item}`}> */}
                 {item != null ? console.log(item) : console.log("is empty")}
-                <NavLink to={`/view/${item.id}`} state={{data:item}}>
+                <NavLink to={`/view/${item.id}`} state={{main:item, sub:data}}>
                   <button style={style.button}>VIEW</button>
                 </NavLink>
               </td>

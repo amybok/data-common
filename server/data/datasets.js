@@ -23,6 +23,11 @@ const datasets = [
       { cBioportal: "https://www.cbioportal.org/" },
       { Redcap: "https://www.project-redcap.org/" },
     ],
+
+    linked_data: [
+      { PDC002: "Lattice Light Sheet" },
+      { PDC005: "Spatial Omics Visium" },
+    ], // might need to find a way to connect relevant dataset together. Also determine how are they relevant if not specified
   },
   {
     id: "PDC002",
@@ -38,6 +43,8 @@ const datasets = [
       { Aquila: "https://aquila.cheunglab.org/" },
       { Redcap: "https://www.project-redcap.org/" },
     ],
+    linked_data: [{ PDC001: "WGS" },
+    { PDC005: "Spatial Omics Visium" },],
   },
   {
     id: "PDC003",
@@ -53,6 +60,7 @@ const datasets = [
       { Aquila: "https://aquila.cheunglab.org/" },
       { cBioportal: "https://www.cbioportal.org/" },
     ],
+    linked_data: [],
   },
   {
     id: "PDC004",
@@ -69,6 +77,7 @@ const datasets = [
       { cBioportal: "https://www.cbioportal.org/" },
       { Redcap: "https://www.project-redcap.org/" },
     ],
+    linked_data: [],
   },
   {
     id: "PDC005",
@@ -82,6 +91,7 @@ const datasets = [
       { py: "https://github.com/amybok/data-common" },
     ], // python script]
     portal: [{ Redcap: "https://www.project-redcap.org/" }],
+    linked_data: ["PDC001", "PDC002"],
   },
 ];
 
