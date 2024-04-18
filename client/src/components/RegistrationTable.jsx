@@ -4,14 +4,29 @@ const RegistrationTable = () => {
     
 
     const style = {
-        form:{
+        form: {
             display: "block",
-            justifyItems: "right"
+            textAlign: "center"
         },
-        item:{
-            margin: "5px",
-            padding: "5px 5px",
-            border: "1px solid"
+        label: {
+            textAlign: "left",
+            fontFamily: "Helvetica",
+            padding: "5px 15px"
+        },
+        table: {
+            display:"flex", 
+            justifyContent:"center",
+            borderRadius: "8px",
+            border: "1px solid",
+            padding: "20px",
+            marginBottom: "10px"
+        },
+        button: {
+            backgroundColor: "darkslategrey",
+            color: "white",
+            borderRadius: "8px",
+            padding: "2px 20px",
+            boxShadow: "none",
         }
     }
 
@@ -32,33 +47,42 @@ const RegistrationTable = () => {
     };
     
     return (
-        <div>
+        <div style={{display:"flex", justifyContent:"space-around"}}>
             <form onSubmit={handleSubmit} style={style.form}>
-                <div className="formItem" style={style.item}>
-                    <label>ID: </label>
-                    <input placeholder="PDC006"/>
-                    <button>Cell type</button>
-                </div>
-                <div className="formItem" style={style.item}>
-                    <label>Name: </label>
-                    <input type="text"/>
-                </div>
-                <div className="formItem" style={style.item}>
-                    <label>Description: </label>
-                    <input type="text"/>
-                </div>
-                <div className="formItem" style={style.item}>
-                    <label>Method: </label>
-                    <button>Method</button>
-                </div>
-                <div className="formItem" style={style.item}>
-                    <label>File path: </label>
-                    <input type="text"/>
-                </div>
-                <div className="formItem" style={style.item}>
-                    <label>Link to portals: </label>
-                    <input type="text"/>
-                </div>
+
+                <h1 style={{fontFamily:"Helvetica", fontWeight:"Lighter", marginTop:"50px", marginBottom:"20px"}}>
+                    Register new dataset
+                </h1>
+
+                <table style={style.table}>
+                    <tbody>
+                        <tr>
+                            <th style={style.label}>Cell type</th>
+                            <button style={style.button}>Cell type</button>
+                        </tr>
+                        <tr>
+                            <th style={style.label}><label>Name</label></th>
+                            <td><input type="text"/></td>
+                        </tr>
+                        <tr>
+                            <th style={style.label}><label>Description</label></th>
+                            <td><input type="text"/></td>
+                        </tr>
+                        <tr>    
+                            <th style={style.label}><label>Method</label></th>
+                            <td><button style={style.button}>Method</button></td>
+                        </tr>
+                        <tr>
+                            <th style={style.label}><label>File path</label></th>
+                            <td><input type="text"/></td>
+                        </tr>
+                        <tr>
+                            <th style={style.label}><label>Link to portals</label></th>
+                            <td><input type="text"/></td>
+                        </tr>
+                    </tbody>
+                </table>
+
                 <button type="submit">Submit</button>
             </form>
         </div>
