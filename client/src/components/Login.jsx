@@ -26,11 +26,11 @@ const Login = () => {
 
   return (
     <div>
-      <div className="input-group mb-3" style={{fontFamily:"Readex Pro", display:"block"}}>
+      <div className="input-group mb-3" style={{fontFamily:"Helvetica Neue", display:"block"}}>
                 <h4 style={style.label}>Username</h4>
                 <input placeholder="Type your username" style={style.input}/>
       </div>
-      <div className="input-group mb-3" style={{fontFamily:"Readex Pro", display:"block"}}>
+      <div className="input-group mb-3" style={{fontFamily:"Helvetica Neue", display:"block"}}>
                 <h4 style={style.label}>Password</h4>
                 <input placeholder="Type your password" type="password" style={style.input}/>
       </div>
