@@ -1,26 +1,24 @@
 import React, { useState, useEffect } from "react";
 import DataTable from "../components/DataTable";
-import Filter
-from "../components/Filter";
+import Filter from "../components/Filter";
 
 const DatasetPage = () => {
-  const [entries, setEntries] = useState([]);
+  const [data, setData] = useState([]);
 
-  useEffect (() => {
+  useEffect(() => {
     getData();
-  }, [])
+  }, []);
 
-  const getData = async() => {
+  const getData = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/datasets")
-      const data = await response.json()
-      console.log(data)
-      setEntries(data)
+      const response = await fetch("http://localhost:3000/api/datasets");
+      const data = await response.json();
+      console.log(data);
+      setData(data);
     } catch (error) {
-      console.error("Error fetching dataset::", error)
+      console.error("Error fetching dataset::", error);
     }
-  }
-
+  };
 
   return (
     <div
@@ -30,8 +28,8 @@ const DatasetPage = () => {
         padding: "50px",
       }}
     >
-      <DataTable data={entries}/>
-      <Filter/>
+      <DataTable data={data} />
+      <Filter />
     </div>
   );
 };
