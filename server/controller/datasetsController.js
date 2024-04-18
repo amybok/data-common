@@ -40,14 +40,14 @@ datasetsApi.post("/", jsonParser, async (req, res) => {
     datasetsApi.use(express.json());
     
     // Get the data from the request body
-    const data = req;
+    const data = req.body;
 
     console.log(req.body)
 
     // Validate the data
     if (data.name && data.method) {
         const newId = "PDC00" + datasets.length + 1;
-        const newDataset = new Dataset(newId, data.name, data.method);
+        const newDataset = {"id": newId, "name" : data.name, "method" : data.method};
 
         // Add the new dataset to the datasets array
         datasets.push(newDataset);
