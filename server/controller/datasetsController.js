@@ -4,6 +4,9 @@ import bodyParser from "body-parser";
 
 const datasetsApi = express.Router();
 
+// create application/json parser
+var jsonParser = bodyParser.json()
+
 // Create a route and a handler for GET /datasets
 datasetsApi.get('/', (req, res) => {
     // Send the datasets array as a JSON response
@@ -31,15 +34,15 @@ datasetsApi.get('/:id', (req, res) => {
 });
 
 // Create a route and a handler for POST /datasets
-datasetsApi.post("/", (req, res) => {
+datasetsApi.post("/", jsonParser, async (req, res) => {
     // To handle the request body, we need to use a middleware called express.json
     // This middleware parses the request body as JSON and adds it to the req object
     datasetsApi.use(express.json());
     
     // Get the data from the request body
-    const data = req.body;
+    const data = req;
 
-    console.log(data)
+    console.log(req.body)
 
     // Validate the data
     if (data.name && data.method) {
