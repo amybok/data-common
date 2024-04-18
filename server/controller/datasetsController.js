@@ -46,7 +46,7 @@ datasetsApi.post("/", jsonParser, async (req, res) => {
 
     // Validate the data
     if (data.name && data.method) {
-        const newId = "PDC00" + datasets.length + 1;
+        const newId = "PDC00" + (datasets.length + 1);
         const newDataset = {"id": newId, "name" : data.name, "method" : data.method};
 
         // Add the new dataset to the datasets array
