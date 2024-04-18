@@ -21,10 +21,19 @@ const ViewPage = () => {
       marginTop: "20px",
     },
 
+    h3_hyperlink: {
+      fontFamily: "system-ui",
+      fontWeight: "500",
+      // paddingLeft: "20px",
+      margin: "0 0 0 0",
+    },
+
     h4: {
-      paddingLeft: "20px",
-      paddingRight: "20px",
+      // paddingLeft: "20px",
+      // paddingRight: "20px",
+      paddingTop: "10px",
       fontWeight: "lighter",
+      margin: "0 0 0 0",
     },
 
     p: {
@@ -45,7 +54,7 @@ const ViewPage = () => {
       backgroundColor: "white",
       textAlign: "justify",
       wordWrap: "break-word",
-      width: "fit-content",
+      width: "80%",
       fontFamily: "system-ui",
       boxShadow: "0px 5px 10px 0px rgba(0,0,0, 0.5)",
       borderRadius: "8px",
@@ -83,31 +92,33 @@ const ViewPage = () => {
         <div style={style.dataset_info} className="dataset-info">
           <h3 style={style.h3}>Description</h3>
           <p style={style.p} className="dataset-summary">
-            The diagnosis of pancreatic neuroendocrine tumours (PanNETs) is
-            increasing owing to more sensitive detection methods, and this
-            increase is creating challenges for clinical management. We
-            performed whole-genome sequencing of 102 primary PanNETs and defined
-            the genomic events that characterize their pathogenesis. Here we
-            describe the mutational signatures they harbour, including a
-            deficiency in G:C T:A base excision repair due to inactivation of
-            MUTYH, which encodes a DNA glycosylase. Clinically sporadic PanNETs
-            contain a larger-than-expected proportion of germline mutations,
-            including previously unreported mutations in the DNA repair genes
-            MUTYH, CHEK2 and BRCA2. Together with mutations in MEN1 and VHL,
-            these mutations occur in 17% of patients. Somatic mutations,
-            including point mutations and gene fusions, were commonly found in
-            genes involved in four main pathways: chromatin remodelling, DNA
-            damage repair, activation of mTOR signalling (including previously
-            undescribed EWSR1 gene fusions), and telomere maintenance. In
-            addition, our gene expression analyses identified a subgroup of
-            tumours associated with hypoxia and HIF signalling.
+            {state.data.description}
           </p>
         </div>
 
         <div style={style.dataset_hyperlinks} className="dataset-hyperlinks">
-          <h3 style={style.h3}>Raw Data</h3>
-          <h4 style={style.h4}>Located: WEHI Milton/vast/projects/PDC0001</h4>
-          <h3 style={style.h3}>Copy code for raw data</h3>
+          <div
+            className="raw-data-location"
+            style={{
+              marginTop: "20px",
+              marginLeft: "20px",
+            }}
+          >
+            <h3 style={style.h3_hyperlink}>Raw Data</h3>
+            <h4 style={style.h4}>Location: {state.data.file_path}</h4>
+          </div>
+          <div
+            className="raw-data-code"
+            style={{
+              marginTop: "20px",
+              marginLeft: "20px",
+            }}
+          >
+            <h3 style={style.h3_hyperlink}>Copy code for raw data</h3>
+            <a href={state.data.raw_link}>
+              <h4 style={style.h4}>{state.data.raw_link}</h4>
+            </a>
+          </div>
         </div>
       </div>
     </div>
