@@ -211,7 +211,7 @@ const ViewPage = () => {
                         sub: sub_data,
                       }}
                     >
-                      <buttton>VIEW</buttton>
+                      <button s>VIEW</button>
                     </NavLink>
                   </tr>
                 ))}
