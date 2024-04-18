@@ -1,9 +1,9 @@
 import {Outlet, useLoaderData} from "react-router-dom"
 
 //Assets
-import wave from "../assets/wave.svg"
-import LoginPage from "../pages/LoginPage"
 import Head from "../components/Head"
+import RegistrationTable from "../components/RegistrationTable"
+
 
 
 
@@ -12,6 +12,7 @@ const Main = () => {
     <div className="layout">
         <Head/>
         <main>
+            <RegistrationTable/>
             <Outlet/>
         </main>
     </div>
