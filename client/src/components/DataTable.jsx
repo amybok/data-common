@@ -67,6 +67,7 @@ const DataTable = ({ data }) => {
           </tr>
         </thead>
         <tbody>
+          {console.log(data)}
           {data.map((item) => (
             <tr>
               <th style={style.td}>{item.id}</th>

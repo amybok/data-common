@@ -1,9 +1,31 @@
 import React from "react";
 import { useLocation, NavLink } from "react-router-dom";
+import "../style/button.css";
 
 const ViewPage = () => {
   let { state } = useLocation();
   console.log(state);
+
+  const transformKeys = (item) => {
+    const key = Object.keys(item).toString();
+    console.log(key);
+    let newKey;
+    switch (key) {
+      case "ipynb":
+        newKey = "WEHI Jupyter Notebook";
+        break;
+      case "r":
+        newKey = "WEHI RStudio";
+        break;
+      case "py":
+        newKey = "Python Script";
+        break;
+      default:
+        newKey = key;
+    }
+
+    return newKey;
+  };
 
   const style = {
     h2_title: {
@@ -72,6 +94,19 @@ const ViewPage = () => {
       boxShadow: "0px 5px 10px 0px rgba(0,0,0,0.5)",
       borderRadius: "8px",
     },
+
+    button: {
+      fontFamily: "system-ui",
+      fontWeight: "lighter",
+      fontSize: "medium",
+      borderRadius: "12px",
+      paddingLeft: "20px",
+      paddingRight: "20px",
+      margin: "5px",
+      border: "solid grey 1px",
+      color: "black",
+      backgroundColor: "white",
+    },
   };
 
   return (
@@ -115,9 +150,24 @@ const ViewPage = () => {
             }}
           >
             <h3 style={style.h3_hyperlink}>Copy code for raw data</h3>
-            <a href={state.data.raw_link}>
-              <h4 style={style.h4}>{state.data.raw_link}</h4>
-            </a>
+            {state.data.code.map((item) => (
+              <a href={Object.values(item)}>
+                <button>{transformKeys(item)}</button>
+              </a>
+            ))}
+          </div>
+
+          <div
+            className="data-portals"
+            style={{
+              marginTop: "20px",
+              marginLeft: "20px",
+            }}
+          >
+            <h3 style={style.h3_hyperlink}>Data Portals</h3>
+            {state.data.portal.map((port) => (
+              <a href={Object.values(port)}><button>{Object.keys(port).toString()}</button></a>
+            ))}
           </div>
         </div>
       </div>
