@@ -13,7 +13,21 @@ const datasets = [
     description: "This is discription",
     method: "WGS",
     file_path: "path/path/path",
-    raw_link: "https://github.com/amybok/data-common",
+    code: [
+      { ipynb: "https://github.com/amybok/data-common" }, // jupyternote book
+      { r: "https://github.com/amybok/data-common" }, // R script
+      { py: "https://github.com/amybok/data-common" },
+    ], // python script]
+    portal: [
+      { Aquila: "https://aquila.cheunglab.org/" },
+      { cBioportal: "https://www.cbioportal.org/" },
+      { Redcap: "https://www.project-redcap.org/" },
+    ],
+
+    linked_data: [
+      { PDC002: "Lattice Light Sheet" },
+      { PDC005: "Spatial Omics Visium" },
+    ], // might need to find a way to connect relevant dataset together. Also determine how are they relevant if not specified
   },
   {
     id: "PDC002",
@@ -21,11 +35,16 @@ const datasets = [
     description: "This is discription",
     method: "Lattice Light Sheet",
     file_path: "path/path/path",
-    code: {
-        ipynb: "https://github.com/amybok/data-common", // jupyternote book
-        r: "https://github.com/amybok/data-common", // R script
-        py: "https://github.com/amybok/data-common", // python script
-    }
+    code: [
+      { ipynb: "https://github.com/amybok/data-common" }, // jupyternote book
+      { py: "https://github.com/amybok/data-common" },
+    ], // python script]
+    portal: [
+      { Aquila: "https://aquila.cheunglab.org/" },
+      { Redcap: "https://www.project-redcap.org/" },
+    ],
+    linked_data: [{ PDC001: "WGS" },
+    { PDC005: "Spatial Omics Visium" },],
   },
   {
     id: "PDC003",
@@ -33,10 +52,15 @@ const datasets = [
     description: "This is discription",
     method: "Other",
     file_path: "path/path/path",
-    code: {
-        ipynb: "https://github.com/amybok/data-common", // jupyternote book
-        r: "https://github.com/amybok/data-common", // R script
-    }
+    code: [
+      { ipynb: "https://github.com/amybok/data-common" }, // jupyternote book
+      { r: "https://github.com/amybok/data-common" }, // R script
+    ], // python script]
+    portal: [
+      { Aquila: "https://aquila.cheunglab.org/" },
+      { cBioportal: "https://www.cbioportal.org/" },
+    ],
+    linked_data: [],
   },
   {
     id: "PDC004",
@@ -44,10 +68,16 @@ const datasets = [
     description: "This is discription",
     method: "Other",
     file_path: "path/path/path",
-    code: {
-        ipynb: "https://github.com/amybok/data-common", // jupyternote book
-        py: "https://github.com/amybok/data-common", // python script
-    }
+    code: [
+      // jupyternote book
+      { r: "https://github.com/amybok/data-common" }, // R script
+      { py: "https://github.com/amybok/data-common" },
+    ], // python script]
+    portal: [
+      { cBioportal: "https://www.cbioportal.org/" },
+      { Redcap: "https://www.project-redcap.org/" },
+    ],
+    linked_data: [],
   },
   {
     id: "PDC005",
@@ -55,10 +85,13 @@ const datasets = [
     description: "This is discription",
     method: "Spatial",
     file_path: "path/path/path",
-    code: {
-        r: "https://github.com/amybok/data-common", // R script
-        py: "https://github.com/amybok/data-common", // python script
-    }
+    code: [
+      { ipynb: "https://github.com/amybok/data-common" }, // jupyternote book
+      { r: "https://github.com/amybok/data-common" }, // R script
+      { py: "https://github.com/amybok/data-common" },
+    ], // python script]
+    portal: [{ Redcap: "https://www.project-redcap.org/" }],
+    linked_data: ["PDC001", "PDC002"],
   },
 ];
 

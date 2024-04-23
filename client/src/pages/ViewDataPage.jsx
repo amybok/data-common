@@ -1,9 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import { useLocation, NavLink } from "react-router-dom";
+import "../style/button.css";
 
 const ViewPage = () => {
   let { state } = useLocation();
-  console.log(state);
+  const main_data = state.main;
+  const sub_data = state.sub;
+
+  // const [linkedData, setLinkedData] = useState([]);
+
+  const transformKeys = (item) => {
+    const key = Object.keys(item).toString();
+    let newKey;
+    switch (key) {
+      case "ipynb":
+        newKey = "WEHI Jupyter Notebook";
+        break;
+      case "r":
+        newKey = "WEHI RStudio";
+        break;
+      case "py":
+        newKey = "Python Script";
+        break;
+      default:
+        newKey = key;
+    }
+
+    return newKey;
+  };
+
+  const getLinkedData = (name) => {
+    let result;
+    sub_data.map((item) => (item.id === name ? (result = item) : null));
+    return result;
+  };
 
   const style = {
     h2_title: {
@@ -28,6 +58,11 @@ const ViewPage = () => {
       margin: "0 0 0 0",
     },
 
+    h3_associated: {
+      fontFamily: "system-ui",
+      fontWeight: "500",
+      marginTop: "15px",
+    },
     h4: {
       // paddingLeft: "20px",
       // paddingRight: "20px",
@@ -72,12 +107,25 @@ const ViewPage = () => {
       boxShadow: "0px 5px 10px 0px rgba(0,0,0,0.5)",
       borderRadius: "8px",
     },
+
+    button: {
+      fontFamily: "system-ui",
+      fontWeight: "lighter",
+      fontSize: "medium",
+      borderRadius: "12px",
+      paddingLeft: "20px",
+      paddingRight: "20px",
+      margin: "5px",
+      border: "solid grey 1px",
+      color: "black",
+      backgroundColor: "white",
+    },
   };
 
   return (
     <div>
       <div style={{ marginLeft: "100px" }} className="data-title">
-        <h2 style={style.h2_title}>{state.data.name}</h2>
+        <h2 style={style.h2_title}>{main_data.name}</h2>
       </div>
 
       <div
@@ -92,7 +140,7 @@ const ViewPage = () => {
         <div style={style.dataset_info} className="dataset-info">
           <h3 style={style.h3}>Description</h3>
           <p style={style.p} className="dataset-summary">
-            {state.data.description}
+            {main_data.description}
           </p>
         </div>
 
@@ -105,7 +153,7 @@ const ViewPage = () => {
             }}
           >
             <h3 style={style.h3_hyperlink}>Raw Data</h3>
-            <h4 style={style.h4}>Location: {state.data.file_path}</h4>
+            <h4 style={style.h4}>Location: {main_data.file_path}</h4>
           </div>
           <div
             className="raw-data-code"
@@ -115,9 +163,60 @@ const ViewPage = () => {
             }}
           >
             <h3 style={style.h3_hyperlink}>Copy code for raw data</h3>
-            <a href={state.data.raw_link}>
-              <h4 style={style.h4}>{state.data.raw_link}</h4>
-            </a>
+            {main_data.code.map((item) => (
+              <a href={Object.values(item)}>
+                <button>{transformKeys(item)}</button>
+              </a>
+            ))}
+          </div>
+
+          <div
+            className="data-portals"
+            style={{
+              marginTop: "20px",
+              marginLeft: "20px",
+            }}
+          >
+            <h3 style={style.h3_hyperlink}>Data Portals</h3>
+            {main_data.portal.map((port) => (
+              <a href={Object.values(port)}>
+                <button>{Object.keys(port).toString()}</button>
+              </a>
+            ))}
+          </div>
+
+          <div
+            className="related-data"
+            style={{
+              marginTop: "20px",
+              marginLeft: "20px",
+              borderTop: "1px solid rgb(203,203,203)",
+            }}
+          >
+            <h3 style={style.h3_associated}>Associated Dataset</h3>
+            <table>
+              <tbody>
+                {main_data.linked_data.map((other) => (
+                  <tr>
+                    <th style={{ paddingRight: "20px" }}>
+                      {Object.keys(other)}
+                    </th>
+                    <td style={{ paddingRight: "20px" }}>
+                      {Object.values(other).toString()}
+                    </td>
+                    <NavLink
+                      to={`/view/${Object.keys(other)}`}
+                      state={{
+                        main: getLinkedData(Object.keys(other).toString()),
+                        sub: sub_data,
+                      }}
+                    >
+                      <button s>VIEW</button>
+                    </NavLink>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
       </div>

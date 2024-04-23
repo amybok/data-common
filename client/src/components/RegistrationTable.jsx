@@ -1,6 +1,5 @@
 
 const RegTable = () => {
-
     const style = {
         table:{
 
