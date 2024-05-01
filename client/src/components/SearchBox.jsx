@@ -42,7 +42,7 @@ const SearchBox = () => {
         let cancel = false;
 
         try {
-            const response = await fetch(`http://localhost:3000/api/datasets/${query}`);
+            const response = await fetch(`http://115.146.86.176/api/datasets/${query}`);
             console.log(response)
             const data = await response.json();
             console.log(data);
