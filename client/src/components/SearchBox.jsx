@@ -60,7 +60,7 @@ const SearchBox = () => {
                 <input placeholder="Search" style={style.searchbox} type="text" onChange={handleSearchChange} value={searchTerm}/>
                     <div className="results-container" style={{fontFamily:"Helvetica", fontWeight:"300"}}>
                         {console.log(searchResults)}
-                        <NavLink to={`/datasets/${searchResults.id}`}>
+                        <NavLink to={`/view/${searchResults.id}`}>
                             {searchResults.id + " "}
                             {searchResults.name}
                         </NavLink>
