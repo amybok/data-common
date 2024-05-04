@@ -29,26 +29,28 @@ const Filter = () => {
         <caption>
           <h2 style={style.h2}>Filter</h2>
         </caption>
-        <tr>
-          <td>
-            <button style={style.button}>WGS</button>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <button style={style.button}>WGS</button>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <button style={style.button}>WGS</button>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <button style={style.button}>WGS</button>
-          </td>
-        </tr>
+        <tbody>
+          <tr>
+            <td>
+              <button style={style.button}>WGS</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button style={style.button}>WGS</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button style={style.button}>WGS</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button style={style.button}>WGS</button>
+            </td>
+          </tr>
+        </tbody>
       </table>
     </>
   );

@@ -74,10 +74,10 @@ const DataTable = ({ data }) => {
         </caption>
         <thead>
           <tr>
-            <th style={style.thead}>Dataset ID</th>
-            <th style={style.thead}>Summary</th>
-            <th style={style.thead}>Technology</th>
-            <th style={style.thead}></th>
+            <td style={style.thead}>Dataset ID</td>
+            <td style={style.thead}>Summary</td>
+            <td style={style.thead}>Technology</td>
+            <td style={style.thead}></td>
           </tr>
         </thead>
         <tbody>
