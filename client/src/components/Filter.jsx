@@ -3,8 +3,9 @@ import React from "react";
 const Filter = () => {
   const style = {
     h2: {
-      fontFamily: "Roboto",
+      fontFamily: "Helvetica Neue",
       fontWeight: "300",
+      textAlign: "Left"
     },
 
     table: {
@@ -24,7 +25,7 @@ const Filter = () => {
     },
   };
   return (
-    <>
+    <div>
       <table style={style.table}>
         <caption>
           <h2 style={style.h2}>Filter</h2>
@@ -52,7 +53,7 @@ const Filter = () => {
           </tr>
         </tbody>
       </table>
-    </>
+    </div>
   );
 };
 
