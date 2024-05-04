@@ -41,8 +41,9 @@ const SearchBox = () => {
         setSearchTerm(query);
         let cancel = false;
 
+        // (`http://115.146.86.176/api/datasets/${query}`) -- production url
         try {
-            const response = await fetch(`http://115.146.86.176/api/datasets/${query}`);
+            const response = await fetch(`http://localhost:3001/api/datasets/${query}`);
             console.log(response)
             const data = await response.json();
             console.log(data);
@@ -60,7 +61,7 @@ const SearchBox = () => {
                 <input placeholder="Search" style={style.searchbox} type="text" onChange={handleSearchChange} value={searchTerm}/>
                     <div className="results-container" style={{fontFamily:"Helvetica", fontWeight:"300"}}>
                         {console.log(searchResults)}
-                        <NavLink to={`/datasets/${searchResults.id}`}>
+                        <NavLink to={`/view/${searchResults.id}`}>
                             {searchResults.id + " "}
                             {searchResults.name}
                         </NavLink>

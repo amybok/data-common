@@ -11,7 +11,7 @@ const Head = () => {
 
 
   return (
-    <div>
+    <div display="flex">
       {console.log(location)}
       <header  style={{display: "flex", alignItems: "center", 
             justifyContent: "space-between", paddingTop:"5px", paddingBottom:"5px"}}>

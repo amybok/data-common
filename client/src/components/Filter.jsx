@@ -8,8 +8,7 @@ const Filter = () => {
     },
 
     table: {
-      borderSpacing: "0",
-      backgroundColor: "white",
+      borderSpacing: "0"
     },
 
     button: {
@@ -19,7 +18,7 @@ const Filter = () => {
       borderRadius: "12px",
       paddingLeft: "20px",
       paddingRight: "20px",
-      border: "solid rgb(52,90,90) 2px",
+      border: "solid rgb(52,90,90) 1px",
       color: "black",
       backgroundColor: "white",
     },
