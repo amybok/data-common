@@ -50,28 +50,26 @@ const RegistrationTable = () => {
         console.log(formData)
     }
 
-    /* const handleSubmit = (event) => {
+    const handleSubmit = (event) => {
         event.preventDefault();
 
-        const formData = new FormData(event.target);
-        const inputValue = formData.get('inputName');
 
-        sendInputValueToApi(inputValue).then(() => 
-
-            // (`http://115.146.86.176/api/datasets`) -- production url
-            fetch("http://localhost:3000/api/datasets", {
-                method: "POST",
-                body: JSON.stringify({"name": this.state.name, "method": this.state.method}),
-                headers: { "Content-Type": "application.json"}
-            })
-        )  
+        // (`http://115.146.86.176/api/datasets`) -- production url
+        fetch("http://localhost:3001/api/datasets", {
+            method: "POST",
+            body: JSON.stringify(formData),
+            headers: { "Content-Type": "application.json"}
+        })
+        .then((response) => {
+            console.log(response.status)
+        }) 
     };
-    */
+    
     
     return (
         <div style={{display:"flex", justifyContent:"space-around"}}>
             {/*<form onSubmit={handleSubmit} style={style.form}>*/}
-            <form style={style.form}>
+            <form style={style.form} onSubmit={handleSubmit}>
 
                 <h1 style={{fontFamily:"Helvetica", fontWeight:"Lighter", marginTop:"50px", marginBottom:"20px"}}>
                     Register new dataset
