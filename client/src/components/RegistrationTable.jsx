@@ -47,22 +47,26 @@ const RegistrationTable = () => {
             [name]:value
         }));
 
-        console.log(formData)
+        //console.log(formData)
     }
 
     const handleSubmit = (event) => {
         event.preventDefault();
 
+        console.log(formData);
+
+        
 
         // (`http://115.146.86.176/api/datasets`) -- production url
         fetch("http://localhost:3001/api/datasets", {
             method: "POST",
-            body: JSON.stringify(formData),
-            headers: { "Content-Type": "application.json"}
+            headers: { "Content-Type": "application/json"},
+            body: JSON.stringify(formData)
         })
         .then((response) => {
             console.log(response.status)
         }) 
+        .catch(error => console.error('Error:', error))
     };
     
     
@@ -94,7 +98,8 @@ const RegistrationTable = () => {
                         <tr>    
                             <th style={style.label}><label>Method</label></th>
                             <td>
-                                <button style={style.button}>Method</button>
+                                <input type="text" name="method" value={formData.method} onChange={(e) => handleInputChange(e)}/>
+                                {/*<button style={style.button}>Method</button>*/}
                             </td>
                         </tr>
                         <tr>
