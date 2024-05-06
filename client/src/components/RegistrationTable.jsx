@@ -18,7 +18,7 @@ const RegistrationTable = () => {
         label: {
             textAlign: "left",
             fontFamily: "Helvetica",
-            padding: "5px 15px"
+            padding: "10px 15px"
         },
         table: {
             display:"flex", 
@@ -36,6 +36,9 @@ const RegistrationTable = () => {
             padding: "2px 20px",
             boxShadow: "none",
         },
+        row: {
+            paddingTop: "30px"
+        }
     }
 
     const handleInputChange = (event) => {
@@ -74,18 +77,18 @@ const RegistrationTable = () => {
             {/*<form onSubmit={handleSubmit} style={style.form}>*/}
             <form style={style.form} onSubmit={handleSubmit}>
 
-                <h1 style={{fontFamily:"Helvetica", fontWeight:"Lighter", marginTop:"50px", marginBottom:"20px"}}>
+                <h2 style={{fontFamily:"Helvetica", fontWeight:"Lighter", marginTop:"50px", marginBottom:"20px"}}>
                     Register new dataset
-                </h1>
+                </h2>
 
                 <table style={style.table}>
                     <tbody>
-                        <tr>
+                        {/*<tr>
                             <th style={style.label}>Cell type</th>
                             <td>
                                 <button style={style.button}>Cell type</button>
                             </td>
-                        </tr>
+                        </tr>*/}
                         <tr>
                             <th style={style.label}><label>Name</label></th>
                             <td><input type="text" name="name" value={formData.name} onChange={(e) => handleInputChange(e)}/></td>
@@ -99,7 +102,7 @@ const RegistrationTable = () => {
                             <td>
                                 {/*<input type="text" name="method" value={formData.method} onChange={(e) => handleInputChange(e)}/>*/}
                                 <select name="method" value={formData.method} onChange={(e) => handleInputChange(e)}>
-                                    <option value="">Select</option>
+                                    <option value="">(Select)</option>
                                     <option value="WGS">WGS</option>
                                     <option value="LLS">LLS</option>
                                     <option value="Spatial">Spatial</option>

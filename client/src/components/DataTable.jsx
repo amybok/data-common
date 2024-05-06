@@ -7,12 +7,15 @@ const DataTable = ({ data }) => {
   const style = {
     h2: {
       fontFamily: "Helvetica Neue",
-      fontWeight: "300",
+      fontSize: "25px"
     },
 
     caption: {
       textAlign: "left",
       marginLeft: "10px",
+      display:"flex",
+      justifyContent: "space-between",
+      marginBottom:"15px"
     },
 
     table: {
@@ -67,11 +70,18 @@ const DataTable = ({ data }) => {
   };
 
   return (
-    
+    <div>
+      <caption style={style.caption}>
+        <div style={style.h2}>All Dataset</div>
+
+        <NavLink to={'/registration'}>
+          <button>Register new dataset</button>
+        </NavLink>
+
+      </caption>
+
+
       <table style={style.table}>
-        <caption style={style.caption}>
-          <h2 style={style.h2}>All Dataset</h2>
-        </caption>
         <thead>
           <tr>
             <td style={style.thead}>Dataset ID</td>
@@ -98,7 +108,7 @@ const DataTable = ({ data }) => {
           ))}
         </tbody>
       </table>
-    
+    </div>
   );
 };
 
