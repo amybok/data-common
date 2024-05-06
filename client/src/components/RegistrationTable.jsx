@@ -35,7 +35,7 @@ const RegistrationTable = () => {
             borderRadius: "8px",
             padding: "2px 20px",
             boxShadow: "none",
-        }
+        },
     }
 
     const handleInputChange = (event) => {
@@ -47,7 +47,6 @@ const RegistrationTable = () => {
             [name]:value
         }));
 
-        //console.log(formData)
     }
 
     const handleSubmit = (event) => {
@@ -98,7 +97,15 @@ const RegistrationTable = () => {
                         <tr>    
                             <th style={style.label}><label>Method</label></th>
                             <td>
-                                <input type="text" name="method" value={formData.method} onChange={(e) => handleInputChange(e)}/>
+                                {/*<input type="text" name="method" value={formData.method} onChange={(e) => handleInputChange(e)}/>*/}
+                                <select name="method" value={formData.method} onChange={(e) => handleInputChange(e)}>
+                                    <option value="">Select</option>
+                                    <option value="WGS">WGS</option>
+                                    <option value="LLS">LLS</option>
+                                    <option value="Spatial">Spatial</option>
+                                    <option value="Methyl">Methyl</option>
+                                    <option value="miRNA">miRNA</option>
+                                </select>
                                 {/*<button style={style.button}>Method</button>*/}
                             </td>
                         </tr>
