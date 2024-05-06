@@ -80,34 +80,35 @@ const DataTable = ({ data }) => {
 
       </caption>
 
-
-      <table style={style.table}>
-        <thead>
-          <tr>
-            <td style={style.thead}>Dataset ID</td>
-            <td style={style.thead}>Summary</td>
-            <td style={style.thead}>Technology</td>
-            <td style={style.thead}></td>
-          </tr>
-        </thead>
-        <tbody>
-          {console.log(data)}
-          {data.map((item) => (
-            <tr key={item.id}>
-              <td style={style.td}>{item.id}</td>
-              <td style={style.entries_name}>{item.name}</td>
-              <td style={style.entries_name}>{item.method}</td>
-              <td style={style.td}>
-                {/* <NavLink to={`/view/${item}`}> */}
-                {item != null ? console.log(item) : console.log("is empty")}
-                <NavLink to={`/view/${item.id}`} state={{main:item, sub:data}}>
-                  <button style={style.button}>VIEW</button>
-                </NavLink>
-              </td>
+      <div style={{overflow:"scroll", height:"555px", borderRadius:"5px"}}>
+        <table style={style.table}>
+          <thead style={{position:"sticky", top:"0"}}>
+            <tr>
+              <td style={style.thead}>Dataset ID</td>
+              <td style={style.thead}>Summary</td>
+              <td style={style.thead}>Technology</td>
+              <td style={style.thead}></td>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {console.log(data)}
+            {data.map((item) => (
+              <tr key={item.id}>
+                <td style={style.td}>{item.id}</td>
+                <td style={style.entries_name}>{item.name}</td>
+                <td style={style.entries_name}>{item.method}</td>
+                <td style={style.td}>
+                  {/* <NavLink to={`/view/${item}`}> */}
+                  {item != null ? console.log(item) : console.log("is empty")}
+                  <NavLink to={`/view/${item.id}`} state={{main:item, sub:data}}>
+                    <button style={style.button}>VIEW</button>
+                  </NavLink>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
