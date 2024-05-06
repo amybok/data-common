@@ -7,6 +7,7 @@ const RegistrationTable = () => {
         description:'',
         method:'',
         file_path:'',
+        owner:'',
         portal_link:''
     })
 
@@ -68,7 +69,7 @@ const RegistrationTable = () => {
         .then((response) => {
             console.log(response.status)
         }) 
-        .catch(error => console.error('Error:', error))
+        .catch(error => console.error('Error:', error.message))
     };
     
     
@@ -115,6 +116,10 @@ const RegistrationTable = () => {
                         <tr>
                             <th style={style.label}><label>File path</label></th>
                             <td><input type="text" name="file_path" value={formData.file_path} onChange={(e) => handleInputChange(e)}/></td>
+                        </tr>
+                        <tr>
+                            <th style={style.label}><label>Owner</label></th>
+                            <td><input type="text" name="owner" value={formData.owner} onChange={(e) => handleInputChange(e)}/></td>
                         </tr>
                         <tr>
                             <th style={style.label}><label>Link to portals</label></th>

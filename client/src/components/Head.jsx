@@ -24,7 +24,7 @@ const Head = () => {
 
         <div className="icon_nav">
           {/* this means if page = login then hide the searchbox by rendering an empty div */}
-          {location.pathname === "/login" ? <div></div> : <SearchBox/>}
+          {location.pathname === "/" ? <div></div> : <SearchBox/>}
           {/* remove this to allow for above to work */}
           <img
             src={clipArt}

@@ -64,10 +64,8 @@ const ViewPage = () => {
       marginTop: "15px",
     },
     h4: {
-      // paddingLeft: "20px",
-      // paddingRight: "20px",
       paddingTop: "10px",
-      fontWeight: "lighter",
+      fontWeight: "300",
       margin: "0 0 0 0",
     },
 
@@ -123,6 +121,7 @@ const ViewPage = () => {
 
   return (
     <div>
+      {console.log(main_data)}
       <div style={{ marginLeft: "100px" }} className="data-title">
         <h2 style={style.h2_title}>{main_data.name}</h2>
       </div>
@@ -153,6 +152,7 @@ const ViewPage = () => {
           >
             <h3 style={style.h3_hyperlink}>Raw Data</h3>
             <h4 style={style.h4}>Location: {main_data.file_path}</h4>
+            <h4 style={style.h4}>Owner: {main_data.owner}</h4>
           </div>
           <div
             className="raw-data-code"
