@@ -1,9 +1,12 @@
 function datasetsDetailss(id, name, method) {
-  return {
-    id: id,
-    name: name,
-    method: method,
-  };
+    return {
+        id: id,
+        name: name,
+        description: description,
+        method: method,
+        file_path: file_path,
+        raw_link: raw_link
+    };
 }
 
 const datasets = [
