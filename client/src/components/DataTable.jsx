@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
-
 const DataTable = ({ data }) => {
-
   const style = {
     h2: {
       fontFamily: "Roboto",
@@ -67,16 +65,18 @@ const DataTable = ({ data }) => {
           </tr>
         </thead>
         <tbody>
-          {console.log(data)}
+          {/* {console.log(data)} */}
           {data.map((item) => (
             <tr>
               <th style={style.td}>{item.id}</th>
               <td style={style.entries_name}>{item.name}</td>
               <td style={style.entries_name}>{item.method}</td>
               <td style={style.td}>
-                {/* <NavLink to={`/view/${item}`}> */}
-                {item != null ? console.log(item) : console.log("is empty")}
-                <NavLink to={`/view/${item.id}`} state={{main:item, sub:data}}>
+                {/* {item != null ? console.log(item) : console.log("is empty")} */}
+                <NavLink
+                  to={`/view/${item.id}`}
+                  state={{ main_id: item.id}}
+                >
                   <button style={style.button}>VIEW</button>
                 </NavLink>
               </td>
