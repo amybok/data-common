@@ -11,6 +11,7 @@ const DatasetPage = () => {
 
   const getData = async () => {
     try {
+      // "http://115.146.86.176/api/datasets" -- production
       const response = await fetch("http://115.146.86.176/api/datasets");
       const data = await response.json();
       console.log(data);

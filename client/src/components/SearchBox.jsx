@@ -41,8 +41,9 @@ const SearchBox = () => {
         setSearchTerm(query);
         let cancel = false;
 
+        // (`http://115.146.86.176/api/datasets/${query}`) -- production url
         try {
-            const response = await fetch(`http://115.146.86.176/api/datasets/${query}`);
+            const response = await fetch(`http://localhost:3001/api/datasets/${query}`);
             console.log(response)
             const data = await response.json();
             console.log(data);

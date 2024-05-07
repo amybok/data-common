@@ -26,11 +26,11 @@ const ViewPage = () => {
 
   const style = {
     h2_title: {
-      fontFamily: "Montserrat",
-      fontWeight: "500",
+      fontFamily: "Helvetica Neue",
+      fontWeight: "400",
       paddingLeft: "0px",
-      paddingTop: "80px",
-      paddingBottom: "40px",
+      paddingTop: "50px",
+      paddingBottom: "20px",
     },
 
     h3: {
@@ -53,10 +53,8 @@ const ViewPage = () => {
       marginTop: "15px",
     },
     h4: {
-      // paddingLeft: "20px",
-      // paddingRight: "20px",
       paddingTop: "10px",
-      fontWeight: "lighter",
+      fontWeight: "300",
       margin: "0 0 0 0",
     },
 
@@ -69,8 +67,8 @@ const ViewPage = () => {
 
     dataset_info: {
       paddingTop: "10px",
-      paddingRight: "40px",
-      paddingLeft: "40px",
+      paddingRight: "20px",
+      paddingLeft: "20px",
       paddingBottom: "20px",
       display: "box",
       marginTop: "20px",
@@ -89,8 +87,8 @@ const ViewPage = () => {
       marginTop: "20px",
       fontFamily: "system-ui",
       fontWeight: "300",
-      paddingRight: "40px",
-      paddingLeft: "40px",
+      paddingRight: "20px",
+      paddingLeft: "20px",
       paddingTop: "10px",
       paddingBottom: "20px",
       boxShadow: "0px 5px 10px 0px rgba(0,0,0,0.5)",
@@ -107,12 +105,9 @@ const ViewPage = () => {
       margin: "5px",
       border: "solid grey 1px",
       color: "black",
-      backgroundColor: "white",
     },
   };
-
   return <DataInfo data={data} main_id={main_id} />;
- 
 };
 
 export default ViewPage;
