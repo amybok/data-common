@@ -20,6 +20,15 @@ const RegistrationTable = () => {
         portal_link:''
     })
 
+    const initialFormData = {
+        name:'',
+        description:'',
+        method:'',
+        file_path:'',
+        owner:'',
+        portal_link:''
+    }
+
     const style = {
         form: {
             display: "block",
@@ -103,14 +112,17 @@ const RegistrationTable = () => {
             }
         }) 
         .catch(error => console.error('Error:', error))
+    }
 
+    const handleReset = () => {
+        window.location.reload()
     }
     
     
     return (
         <div style={{display:"flex", justifyContent:"space-around"}}>
             {/*<form onSubmit={handleSubmit} style={style.form}>*/}
-            <form style={style.form} onSubmit={handleSubmit}>
+            <form style={style.form} onSubmit={handleSubmit} onReset={handleReset}>
 
                 <h2 style={{fontFamily:"Helvetica", fontWeight:"Lighter", marginTop:"50px", marginBottom:"20px"}}>
                     Register new dataset
@@ -173,6 +185,7 @@ const RegistrationTable = () => {
                         <NavLink to={"/dataset"}>
                             <button style={{backgroundColor:"slategray"}}>Back to all datasets</button>
                         </NavLink>
+                        <button style={{backgroundColor:"slategray"}} onClick={handleReset}>Submit again</button>
                     </Modal.Footer>
             </Modal>
         </div>
