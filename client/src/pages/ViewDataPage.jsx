@@ -5,9 +5,19 @@ import "../style/button.css";
 
 const ViewPage = () => {
   let { state } = useLocation();
-  const main_id = state.main_id;
+
+  let id = '';
 
   const [data, setData] = useState([]);
+
+  if (state != null){
+    id = state.main.id
+  }
+
+  else {
+    id = useLocation().pathname.slice(location.pathname.lastIndexOf("/")).slice(1)
+    console.log(id)
+  }
 
   useEffect(() => {
     getData();
@@ -15,10 +25,11 @@ const ViewPage = () => {
 
   const getData = async () => {
     try {
-      const response = await fetch("http://115.146.86.176/api/datasets");
+      const response = await fetch(`http://localhost:3001/api/datasets/${id}`);
       const data = await response.json();
       console.log(data);
       setData(data);
+
     } catch (error) {
       console.error("Error fetching dataset::", error);
     }
@@ -107,7 +118,11 @@ const ViewPage = () => {
       color: "black",
     },
   };
-  return <DataInfo data={data} main_id={main_id} />;
+  return (
+    <div>
+      <DataInfo data={data} main_id={id} />
+    </div>
+  )
 };
 
 export default ViewPage;

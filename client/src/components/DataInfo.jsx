@@ -119,7 +119,8 @@ const DataInfo = ({ data, main_id }) => {
 
   return (
     <>
-      {data.map((item) =>
+      {console.log(data)}
+      {[data].map((item) =>
         //   Only load data of the correct id
         item.id === main_id ? (
           <div>
