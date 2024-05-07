@@ -7,6 +7,7 @@ import LoginPage from "./pages/LoginPage";
 // Pages
 import DataSetPage from "./pages/DatasetPage";
 import ViewDataPage from "./pages/ViewDataPage"
+import RegistrationPage from "./pages/RegistrationPage"
 
 const router = createBrowserRouter([
   {
@@ -15,7 +16,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        path: "/login",
+        //path: "/login", -> uncomment if path is needed for login/ or want to change default landing to a different page
         element: <LoginPage />,
       },
 
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: "/view/:id",
         element: <ViewDataPage/>
+      },
+      {
+        path: "/registration",
+        element: <RegistrationPage/>
       }
     ],
   },

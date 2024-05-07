@@ -1,9 +1,8 @@
 import {Outlet, useLoaderData} from "react-router-dom"
 
 //Assets
-import wave from "../assets/wave.svg"
-import LoginPage from "../pages/LoginPage"
 import Head from "../components/Head"
+
 
 
 
