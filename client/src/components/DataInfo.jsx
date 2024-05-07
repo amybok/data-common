@@ -35,8 +35,8 @@ const DataInfo = ({ data, main_id }) => {
       fontFamily: "Helvetica Neue",
       fontWeight: "500",
       paddingLeft: "0px",
-      paddingTop: "80px",
-      paddingBottom: "40px",
+      paddingTop: "50px",
+      paddingBottom: "20px",
     },
 
     h3: {
