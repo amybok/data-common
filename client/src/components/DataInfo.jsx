@@ -32,7 +32,7 @@ const DataInfo = ({ data, main_id }) => {
 
   const style = {
     h2_title: {
-      fontFamily: "Montserrat",
+      fontFamily: "Helvetica Neue",
       fontWeight: "500",
       paddingLeft: "0px",
       paddingTop: "80px",
@@ -119,7 +119,8 @@ const DataInfo = ({ data, main_id }) => {
 
   return (
     <>
-      {data.map((item) =>
+      {console.log(data)}
+      {[data].map((item) =>
         //   Only load data of the correct id
         item.id === main_id ? (
           <div>
@@ -211,7 +212,7 @@ const DataInfo = ({ data, main_id }) => {
                             to={`/view/${Object.keys(other)}`}
                             state={{ main_id: Object.keys(other).toString() }}
                           >
-                            VIEW
+                            <button>VIEW</button>
                           </NavLink>
                         </tr>
                       ))}

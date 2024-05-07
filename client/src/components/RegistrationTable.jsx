@@ -1,6 +1,15 @@
 import React, { useState } from "react";
+import Modal from 'react-bootstrap/Modal';
+import { NavLink } from "react-router-dom";
+
 
 const RegistrationTable = () => {
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+    const [res, setRes] = useState("")
     
     const [formData, setFormData] = useState({
         name:'',
@@ -11,16 +20,27 @@ const RegistrationTable = () => {
         portal_link:''
     })
 
+    const initialFormData = {
+        name:'',
+        description:'',
+        method:'',
+        file_path:'',
+        owner:'',
+        portal_link:''
+    }
+
     const style = {
         form: {
             display: "block",
             textAlign: "center"
         },
+
         label: {
             textAlign: "left",
             fontFamily: "Helvetica",
             padding: "10px 15px"
         },
+
         table: {
             display:"flex", 
             justifyContent:"center",
@@ -30,6 +50,7 @@ const RegistrationTable = () => {
             backgroundColor: "white",
             boxShadow: "0px 5px 10px 0px rgba(0,0,0,0.5)",
         },
+
         button: {
             backgroundColor: "darkslategrey",
             color: "white",
@@ -39,6 +60,21 @@ const RegistrationTable = () => {
         },
         row: {
             paddingTop: "30px"
+        },
+
+        modal: {
+            backgroundColor:"darkslategrey",
+            color:"white",
+            fontFamily: "Helvetica Neue",
+            borderRadius: "12px",
+            textAlign:"center",
+            width:"300px",
+            position: "absolute",   
+            left: "50%",        
+            transform: "translate(-50%, 30%)",
+            paddingTop: "10px",
+            paddingBottom: "10px",
+            boxShadow: "0px 5px 10px 0px rgba(0,0,0,0.5)",
         }
     }
 
@@ -53,12 +89,11 @@ const RegistrationTable = () => {
 
     }
 
+
     const handleSubmit = (event) => {
         event.preventDefault();
 
         console.log(formData);
-
-        
 
         // (`http://115.146.86.176/api/datasets`) -- production url
         fetch("http://115.146.86.176/api/datasets", {
@@ -67,16 +102,27 @@ const RegistrationTable = () => {
             body: JSON.stringify(formData)
         })
         .then((response) => {
-            console.log(response.status)
+            console.log(response.status);
+            
+            if (response.status == "201"){
+                setRes("Dataset registration success")
+            }
+            else {
+                setRes("Failed to register dataset")
+            }
         }) 
-        .catch(error => console.error('Error:', error.message))
-    };
+        .catch(error => console.error('Error:', error))
+    }
+
+    const handleReset = () => {
+        window.location.reload()
+    }
     
     
     return (
         <div style={{display:"flex", justifyContent:"space-around"}}>
             {/*<form onSubmit={handleSubmit} style={style.form}>*/}
-            <form style={style.form} onSubmit={handleSubmit}>
+            <form style={style.form} onSubmit={handleSubmit} onReset={handleReset}>
 
                 <h2 style={{fontFamily:"Helvetica", fontWeight:"Lighter", marginTop:"50px", marginBottom:"20px"}}>
                     Register new dataset
@@ -127,9 +173,21 @@ const RegistrationTable = () => {
                         </tr>
                     </tbody>
                 </table>
-
-                <button type="submit">Submit</button>
+                <button type="submit" onClick={handleShow}>Submit</button>
             </form>
+
+            <Modal show={show} onHide={handleClose} style={style.modal}>
+                    <Modal.Header>
+                        <Modal.Title>Submission status</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>Status: {res}</Modal.Body>
+                    <Modal.Footer style={{marginTop:"5px"}}>
+                        <NavLink to={"/dataset"}>
+                            <button style={{backgroundColor:"slategray"}}>Back to all datasets</button>
+                        </NavLink>
+                        <button style={{backgroundColor:"slategray"}} onClick={handleReset}>Submit again</button>
+                    </Modal.Footer>
+            </Modal>
         </div>
     );
 }
