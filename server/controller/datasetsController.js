@@ -1,6 +1,7 @@
 import express from "express";
 import datasets from "../data/datasets.js"
 import bodyParser from "body-parser";
+import * as fs from 'fs';
 
 const datasetsApi = express.Router();
 
