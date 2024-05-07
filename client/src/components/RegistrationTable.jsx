@@ -1,6 +1,14 @@
 import React, { useState } from "react";
+import Modal from 'react-bootstrap/Modal';
+
 
 const RegistrationTable = () => {
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+    const [res, setRes] = useState("")
     
     const [formData, setFormData] = useState({
         name:'',
@@ -16,11 +24,13 @@ const RegistrationTable = () => {
             display: "block",
             textAlign: "center"
         },
+
         label: {
             textAlign: "left",
             fontFamily: "Helvetica",
             padding: "10px 15px"
         },
+
         table: {
             display:"flex", 
             justifyContent:"center",
@@ -30,6 +40,7 @@ const RegistrationTable = () => {
             backgroundColor: "white",
             boxShadow: "0px 5px 10px 0px rgba(0,0,0,0.5)",
         },
+
         button: {
             backgroundColor: "darkslategrey",
             color: "white",
@@ -39,6 +50,15 @@ const RegistrationTable = () => {
         },
         row: {
             paddingTop: "30px"
+        },
+
+        modal: {
+            backgroundColor:"white",
+            textAlign:"center",
+            width:"500px",
+            position: "absolute",   
+            left: "50%",        
+            transform: "translate(-50%, 50%)"
         }
     }
 
@@ -53,24 +73,31 @@ const RegistrationTable = () => {
 
     }
 
+
     const handleSubmit = (event) => {
         event.preventDefault();
 
         console.log(formData);
 
-        
-
         // (`http://115.146.86.176/api/datasets`) -- production url
-        fetch("http://115.146.86.176/api/datasets", {
+        fetch("http://localhost:3001/api/datasets", {
             method: "POST",
             headers: { "Content-Type": "application/json"},
             body: JSON.stringify(formData)
         })
         .then((response) => {
-            console.log(response.status)
+            console.log(response.status);
+            
+            if (response.status == "201"){
+                setRes("Dataset registration success")
+            }
+            else {
+                setRes("Failed to register dataset")
+            }
         }) 
-        .catch(error => console.error('Error:', error.message))
-    };
+        .catch(error => console.error('Error:', error))
+
+    }
     
     
     return (
@@ -127,9 +154,16 @@ const RegistrationTable = () => {
                         </tr>
                     </tbody>
                 </table>
-
-                <button type="submit">Submit</button>
+                <button type="submit" onClick={handleShow}>Submit</button>
             </form>
+
+            <Modal show={show} onHide={handleClose} style={style.modal}>
+                    <Modal.Header>
+                        <Modal.Title>Submission status</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>Status: {res}</Modal.Body>
+                    
+            </Modal>
         </div>
     );
 }
