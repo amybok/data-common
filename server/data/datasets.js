@@ -18,11 +18,7 @@ const datasets = [
       { r: "https://github.com/amybok/data-common" }, // R script
       { py: "https://github.com/amybok/data-common" },
     ], // python script]
-    portal: [
-      { Aquila: "https://aquila.cheunglab.org/" },
-      { cBioportal: "https://www.cbioportal.org/" },
-      { Redcap: "https://www.project-redcap.org/" },
-    ],
+    portal: [{ cBioportal: "https://www.cbioportal.org/" }],
 
     linked_data: [
       { PDC002: "Lattice Light Sheet" },
@@ -39,32 +35,27 @@ const datasets = [
       { ipynb: "https://github.com/amybok/data-common" }, // jupyternote book
       { py: "https://github.com/amybok/data-common" },
     ], // python script]
-    portal: [
-      { Aquila: "https://aquila.cheunglab.org/" },
-      { Redcap: "https://www.project-redcap.org/" },
-    ],
-    linked_data: [{ PDC001: "WGS" },
-    { PDC005: "Spatial Omics Visium" },],
+    portal: [{ cBioportal: "https://www.cbioportal.org/" }],
+    linked_data: [{ PDC001: "WGS" }, { PDC005: "Spatial Omics Visium" }],
   },
   {
     id: "PDC003",
-    name: "DAXX/ARTX, MEN1, and mTOR pathway genes are frequently altered in pancreatic neuroendocrine tumours",
+    name: "Spatial Omics Human Breast Cancer",
     description: "This is discription",
-    method: "Other",
+    method: "Visium",
     file_path: "path/path/path",
     code: [
       { ipynb: "https://github.com/amybok/data-common" }, // jupyternote book
       { r: "https://github.com/amybok/data-common" }, // R script
     ], // python script]
     portal: [
-      { Aquila: "https://aquila.cheunglab.org/" },
-      { cBioportal: "https://www.cbioportal.org/" },
+      { Aquila: "http://203.101.229.172:3838/aquila-portal/fake_aquila.html" },
     ],
     linked_data: [],
   },
   {
-    id: "PDC004",
-    name: "Lung adenocarcinoma and mesothelioma DNA methylation",
+    id: "DDC001",
+    name: "Ischemic Heart Disease in Melbourne",
     description: "This is discription",
     method: "Other",
     file_path: "path/path/path",
@@ -73,24 +64,31 @@ const datasets = [
       { r: "https://github.com/amybok/data-common" }, // R script
       { py: "https://github.com/amybok/data-common" },
     ], // python script]
-    portal: [
-      { cBioportal: "https://www.cbioportal.org/" },
-      { Redcap: "https://www.project-redcap.org/" },
-    ],
+    portal: [{ Redcap: "http://203.101.229.172:3838/redcap-portal/" }],
     linked_data: [],
   },
   {
-    id: "PDC005",
-    name: "Whole-genome landscape of pancreatic neuroendocrine tumours - Spatial Omics Visium",
+    id: "DDC002",
+    name: "Diabetes Disease in Melbourne",
     description: "This is discription",
-    method: "Spatial",
+    method: "Other",
     file_path: "path/path/path",
     code: [
-      { ipynb: "https://github.com/amybok/data-common" }, // jupyternote book
       { r: "https://github.com/amybok/data-common" }, // R script
-      { py: "https://github.com/amybok/data-common" },
     ], // python script]
-    portal: [{ Redcap: "https://www.project-redcap.org/" }],
+    portal: [{ Redcap: "http://203.101.229.172:3838/redcap-portal/" }],
+    linked_data: ["PDC001", "PDC002"],
+  },
+  {
+    id: "DDC003",
+    name: "Non-stardard Database",
+    description: "This is discription",
+    method: "Other",
+    file_path: "path/path/path",
+    code: [
+      { r: "https://github.com/amybok/data-common" }, // R script
+    ], // python script]
+    portal: [{ Redcap: "http://203.101.229.172:3838/redcap-portal/" }],
     linked_data: ["PDC001", "PDC002"],
   },
 ];
