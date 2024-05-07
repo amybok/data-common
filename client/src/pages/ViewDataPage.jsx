@@ -15,7 +15,8 @@ const ViewPage = () => {
 
   const getData = async () => {
     try {
-      const response = await fetch("http://localhost:3001/api/datasets");
+      const response = await fetch("http://115.146.86.176/api/datasets");
+      // const response = await fetch("http://localhost:3001/api/datasets");
       const data = await response.json();
       console.log(data);
       setData(data);
@@ -107,6 +108,8 @@ const ViewPage = () => {
       color: "black",
     },
   };
+
+
   return <DataInfo data={data} main_id={main_id} />;
 };
 

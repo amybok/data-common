@@ -23,12 +23,11 @@ const DataInfo = ({ data, main_id }) => {
     return newKey;
   };
 
-//   const getRelData = (name) => {
-//     let result;
-//     data.map((item) => (item.id === name ? (result = item) : null));
-//     return result;
-//   };
-
+  //   const getRelData = (name) => {
+  //     let result;
+  //     data.map((item) => (item.id === name ? (result = item) : null));
+  //     return result;
+  //   };
 
   const style = {
     h2_title: {

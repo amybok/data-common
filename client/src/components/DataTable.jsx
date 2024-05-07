@@ -5,15 +5,15 @@ const DataTable = ({ data }) => {
   const style = {
     h2: {
       fontFamily: "Helvetica Neue",
-      fontSize: "25px"
+      fontSize: "25px",
     },
 
     caption: {
       textAlign: "left",
       marginLeft: "10px",
-      display:"flex",
+      display: "flex",
       justifyContent: "space-between",
-      marginBottom:"15px"
+      marginBottom: "15px",
     },
 
     table: {
@@ -42,7 +42,7 @@ const DataTable = ({ data }) => {
       fontFamily: "system-ui",
       fontWeight: "200",
       textAlign: "left",
-      borderBottom: "1px solid rgb(221 221 221)"
+      borderBottom: "1px solid rgb(221 221 221)",
     },
 
     button: {
@@ -56,7 +56,7 @@ const DataTable = ({ data }) => {
       paddingRight: "25px",
       border: "solid 1px darkslategrey",
       backgroundColor: "darkslategray",
-      color: "white"
+      color: "white",
     },
 
     td: {
@@ -68,20 +68,18 @@ const DataTable = ({ data }) => {
   };
 
   return (
-
     <div>
       <caption style={style.caption}>
         <div style={style.h2}>All Dataset</div>
 
-        <NavLink to={'/registration'}>
+        <NavLink to={"/registration"}>
           <button>Register new dataset</button>
         </NavLink>
-
       </caption>
 
-      <div style={{overflow:"scroll", height:"555px", borderRadius:"5px"}}>
+      <div style={{ overflow: "scroll", height: "555px", borderRadius: "5px" }}>
         <table style={style.table}>
-          <thead style={{position:"sticky", top:"0"}}>
+          <thead style={{ position: "sticky", top: "0" }}>
             <tr>
               <td style={style.thead}>Dataset ID</td>
               <td style={style.thead}>Summary</td>
@@ -94,12 +92,10 @@ const DataTable = ({ data }) => {
             {data.map((item) => (
               <tr key={item.id}>
                 <td style={style.td}>{item.id}</td>
-                <td style={style.entries_name}>{item.name}</td>
-                <td style={style.entries_name}>{item.method}</td>
+                <td style={style.td}>{item.name}</td>
+                <td style={style.td}>{item.method}</td>
                 <td style={style.td}>
-                  {/* <NavLink to={`/view/${item}`}> */}
-                  {item != null ? console.log(item) : console.log("is empty")}
-                  <NavLink to={`/view/${item.id}`} state={{main:item, sub:data}}>
+                  <NavLink to={`/view/${item.id}`} state={{ main_id: item.id }}>
                     <button style={style.button}>VIEW</button>
                   </NavLink>
                 </td>
