@@ -1,38 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation, NavLink } from "react-router-dom";
+import DataInfo from "../components/DataInfo";
 import "../style/button.css";
 
 const ViewPage = () => {
   let { state } = useLocation();
-  const main_data = state.main;
-  const sub_data = state.sub;
+  const main_id = state.main_id;
 
-  // const [linkedData, setLinkedData] = useState([]);
+  const [data, setData] = useState([]);
 
-  const transformKeys = (item) => {
-    const key = Object.keys(item).toString();
-    let newKey;
-    switch (key) {
-      case "ipynb":
-        newKey = "WEHI Jupyter Notebook";
-        break;
-      case "r":
-        newKey = "WEHI RStudio";
-        break;
-      case "py":
-        newKey = "Python Script";
-        break;
-      default:
-        newKey = key;
+  useEffect(() => {
+    getData();
+  }, []);
+
+  const getData = async () => {
+    try {
+      const response = await fetch("http://115.146.86.176/api/datasets");
+      const data = await response.json();
+      console.log(data);
+      setData(data);
+    } catch (error) {
+      console.error("Error fetching dataset::", error);
     }
-
-    return newKey;
-  };
-
-  const getLinkedData = (name) => {
-    let result;
-    sub_data.map((item) => (item.id === name ? (result = item) : null));
-    return result;
   };
 
   const style = {
@@ -118,109 +107,7 @@ const ViewPage = () => {
       color: "black",
     },
   };
-
-  return (
-    <div>
-      {console.log(main_data)}
-      <div style={{ marginLeft: "100px" }} className="data-title">
-        <h2 style={style.h2_title}>{main_data.name}</h2>
-      </div>
-
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          marginLeft: "100px",
-          marginRight: "100px",
-        }}
-        className="dataset-content"
-      >
-        <div style={style.dataset_info} className="dataset-info">
-          <h3 style={style.h3}>Description</h3>
-          <p style={style.p} className="dataset-summary">
-            {main_data.description}
-          </p>
-        </div>
-
-        <div style={style.dataset_hyperlinks} className="dataset-hyperlinks">
-          <div
-            className="raw-data-location"
-            style={{
-              marginTop: "20px",
-              marginLeft: "20px",
-            }}
-          >
-            <h3 style={style.h3_hyperlink}>Raw Data</h3>
-            <h4 style={style.h4}>Location: {main_data.file_path}</h4>
-            <h4 style={style.h4}>Owner: {main_data.owner}</h4>
-          </div>
-          <div
-            className="raw-data-code"
-            style={{
-              marginTop: "20px",
-              marginLeft: "20px",
-            }}
-          >
-            <h3 style={style.h3_hyperlink}>Copy code for raw data</h3>
-            {main_data.code.map((item) => (
-              <a href={Object.values(item)}>
-                <button>{transformKeys(item)}</button>
-              </a>
-            ))}
-          </div>
-
-          <div
-            className="data-portals"
-            style={{
-              marginTop: "20px",
-              marginLeft: "20px",
-            }}
-          >
-            <h3 style={style.h3_hyperlink}>Data Portals</h3>
-            {main_data.portal.map((port) => (
-              <a href={Object.values(port)}>
-                <button>{Object.keys(port).toString()}</button>
-              </a>
-            ))}
-          </div>
-
-          <div
-            className="related-data"
-            style={{
-              marginTop: "20px",
-              marginLeft: "20px",
-              borderTop: "1px solid rgb(203,203,203)",
-            }}
-          >
-            <h3 style={style.h3_associated}>Associated Dataset</h3>
-            <table>
-              <tbody>
-                {main_data.linked_data.map((other) => (
-                  <tr>
-                    <th style={{ paddingRight: "20px" }}>
-                      {Object.keys(other)}
-                    </th>
-                    <td style={{ paddingRight: "20px" }}>
-                      {Object.values(other).toString()}
-                    </td>
-                    <NavLink
-                      to={`/view/${Object.keys(other)}`}
-                      state={{
-                        main: getLinkedData(Object.keys(other).toString()),
-                        sub: sub_data,
-                      }}
-                    >
-                      <button s>VIEW</button>
-                    </NavLink>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+  return <DataInfo data={data} main_id={main_id} />;
 };
 
 export default ViewPage;

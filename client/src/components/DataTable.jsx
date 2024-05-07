@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
-
 const DataTable = ({ data }) => {
-
   const style = {
     h2: {
       fontFamily: "Helvetica Neue",
@@ -70,6 +68,7 @@ const DataTable = ({ data }) => {
   };
 
   return (
+
     <div>
       <caption style={style.caption}>
         <div style={style.h2}>All Dataset</div>
