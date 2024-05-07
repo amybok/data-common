@@ -54,9 +54,9 @@ const datasets = [
   },
   {
     id: "PDC003",
-    name: "DAXX/ARTX, MEN1, and mTOR pathway genes are frequently altered in pancreatic neuroendocrine tumours",
+    name: "Spatial Omics Human Breast Cancer",
     description: "This is discription",
-    method: "Other",
+    method: "Visium",
     file_path: "path/path/path",
     owner:"WEHI",
     code: [
@@ -64,7 +64,7 @@ const datasets = [
       { r: "https://github.com/amybok/data-common" }, // R script
     ], // python script]
     portal: [
-      { Aquila: "https://aquila.cheunglab.org/" },
+      { Aquila: "http://203.101.229.172:3838/aquila-portal/fake_aquila.html" },
       { cBioportal: "https://www.cbioportal.org/" },
     ],
     linked_data: [],
