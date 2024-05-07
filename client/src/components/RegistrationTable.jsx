@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Modal from 'react-bootstrap/Modal';
+import { NavLink } from "react-router-dom";
 
 
 const RegistrationTable = () => {
@@ -53,12 +54,18 @@ const RegistrationTable = () => {
         },
 
         modal: {
-            backgroundColor:"white",
+            backgroundColor:"darkslategrey",
+            color:"white",
+            fontFamily: "Helvetica Neue",
+            borderRadius: "12px",
             textAlign:"center",
-            width:"500px",
+            width:"300px",
             position: "absolute",   
             left: "50%",        
-            transform: "translate(-50%, 50%)"
+            transform: "translate(-50%, 30%)",
+            paddingTop: "10px",
+            paddingBottom: "10px",
+            boxShadow: "0px 5px 10px 0px rgba(0,0,0,0.5)",
         }
     }
 
@@ -162,7 +169,11 @@ const RegistrationTable = () => {
                         <Modal.Title>Submission status</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>Status: {res}</Modal.Body>
-                    
+                    <Modal.Footer style={{marginTop:"5px"}}>
+                        <NavLink to={"/dataset"}>
+                            <button style={{backgroundColor:"slategray"}}>Back to all datasets</button>
+                        </NavLink>
+                    </Modal.Footer>
             </Modal>
         </div>
     );
