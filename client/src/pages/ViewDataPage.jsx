@@ -26,7 +26,8 @@ const ViewPage = () => {
   const getData = async () => {
     try {
       //http://115.146.86.176/api/datasets/${id}
-      const response = await fetch(`http://115.146.86.176/api/datasets/${id}`);
+      // const response = await fetch(`http://115.146.86.176/api/datasets/${id}`);
+      const response = await fetch(`http://localhost:3001/api/datasets/${id}`)
       const data = await response.json();
       console.log(data);
       setData(data);
