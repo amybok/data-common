@@ -96,7 +96,7 @@ const RegistrationTable = () => {
         console.log(formData);
 
         // (`http://115.146.86.176/api/datasets`) -- production url
-        fetch("http://115.146.86.176/api/datasets", {
+        fetch("http://localhost:3001/api/datasets", {
             method: "POST",
             headers: { "Content-Type": "application/json"},
             body: JSON.stringify(formData)

@@ -7,7 +7,7 @@ const SearchBox = () => {
 
     const [searchTerm, setSearchTerm] = useState('');
     const [searchResults, setSearchResults] = useState([]);
-
+    const [filtered, setFiltered] = useState([]);
 
     const style = {
         searchbox: {
@@ -32,6 +32,21 @@ const SearchBox = () => {
             transform: "translateY(-50%)", 
             top:"50%", 
             left:"85%"
+        },
+
+        results: {
+            marginTop: "0",
+            width:"290px",
+            marginTop:"2.5px",
+            marginBottom:"2.5px",
+            borderTop: "1px solid rgb(221 221 221)"
+        },
+
+        dropdown: {
+            paddingLeft:"0", 
+            backgroundColor:"white", 
+            margin:"0 0 0 0",
+            display:"none"
         }
     }
 
@@ -43,13 +58,15 @@ const SearchBox = () => {
 
         // (`http://115.146.86.176/api/datasets/${query}`) -- production url
         try {
-            const response = await fetch(`http://115.146.86.176/api/datasets/${query}`);
+            const response = await fetch(`http://localhost:3001/api/datasets/search`);
             console.log(response)
             const data = await response.json();
             console.log(data);
             if (cancel) return
             setSearchResults(data);
 
+            const filteredItems = searchResults.filter((dataset) => dataset.name.toLowerCase().includes(searchTerm.toLowerCase()));
+            setFiltered(filteredItems)
         }
         catch (error) {
             console.error('Error fetching dataset:', error);
@@ -57,14 +74,17 @@ const SearchBox = () => {
     }
 
     return (
-            <div className="wrapper">
+            <div className="wrapper" style={{border:"1px solid grey", borderRadius:"9.70px"}}>
                 <input placeholder="Search" style={style.searchbox} type="text" onChange={handleSearchChange} value={searchTerm}/>
-                    <div className="results-container" style={{fontFamily:"Helvetica", fontWeight:"300"}}>
+                    <div className="results-container" style={{fontFamily:"Helvetica", fontWeight:"300", paddingLeft:"5px", paddingRight:"5px"}}>
                         {console.log(searchResults)}
-                        <NavLink to={`/view/${searchResults.id}`}>
-                            {searchResults.id + " "}
-                            {searchResults.name}
-                        </NavLink>
+                        {console.log(filtered)}
+                        <ul style={style.dropdown}>
+                            {filtered.map(obj => 
+                                <div className="results" style={style.results}>
+                                    <NavLink to={`/view/${obj.id}`} key={obj.id} style={{textDecoration:"none"}}>{obj.name}</NavLink>
+                                </div>)}
+                        </ul>
                     </div>
             </div>
             
