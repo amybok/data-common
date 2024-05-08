@@ -123,7 +123,9 @@ const ViewPage = () => {
     <div>
       <DataInfo data={data} main_id={id} />
       <NavLink to={"/dataset"}>
-        <button style={{marginLeft:"100px", marginTop:"20px"}}>Back to all datasets</button>
+
+        <button style={{marginLeft:"100px", marginTop:"10px"}}>Back to all datasets</button>
+
       </NavLink>
     </div>
   )
