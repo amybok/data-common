@@ -32,10 +32,10 @@ const DataInfo = ({ data, main_id }) => {
 
   const style = {
     h2_title: {
-      fontFamily: "Helvetica Neue",
+      fontFamily: "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
       fontWeight: "500",
       paddingLeft: "0px",
-      paddingTop: "50px",
+      paddingTop: "30px",
       paddingBottom: "20px",
     },
 
@@ -49,7 +49,6 @@ const DataInfo = ({ data, main_id }) => {
     h3_hyperlink: {
       fontFamily: "system-ui",
       fontWeight: "500",
-      // paddingLeft: "20px",
       margin: "0 0 0 0",
     },
 
@@ -59,8 +58,6 @@ const DataInfo = ({ data, main_id }) => {
       marginTop: "15px",
     },
     h4: {
-      // paddingLeft: "20px",
-      // paddingRight: "20px",
       paddingTop: "10px",
       fontWeight: "lighter",
       margin: "0 0 0 0",
@@ -120,6 +117,7 @@ const DataInfo = ({ data, main_id }) => {
   return (
     <>
       {console.log(data)}
+      {/* [data] is used to make json object into array for .map function to works */}
       {[data].map((item) =>
         //   Only load data of the correct id
         item.id === main_id ? (

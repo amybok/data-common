@@ -54,7 +54,7 @@ datasetsApi.post("/", jsonParser, async (req, res) => {
                             "method" : data.method,
                             "file_path" : data.file_path,
                             "owner": data.owner,
-                            "portal_link": data.portal_link};
+                            "portal": data.portal};
 
         // Add the new dataset to the datasets array
         datasets.push(newDataset);

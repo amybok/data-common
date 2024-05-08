@@ -26,11 +26,13 @@ const Login = () => {
 
   return (
     <div>
-      <div className="input-group mb-3" style={{fontFamily:"Helvetica Neue", display:"block"}}>
+      <div className="input-group mb-3" style={{fontFamily:"system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif", 
+      display:"block"}}>
                 <h4 style={style.label}>Username</h4>
                 <input placeholder="Type your username" style={style.input}/>
       </div>
-      <div className="input-group mb-3" style={{fontFamily:"Helvetica Neue", display:"block"}}>
+      <div className="input-group mb-3" style={{fontFamily:"system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif", 
+      display:"block"}}>
                 <h4 style={style.label}>Password</h4>
                 <input placeholder="Type your password" type="password" style={style.input}/>
       </div>
