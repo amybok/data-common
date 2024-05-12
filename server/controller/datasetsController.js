@@ -14,6 +14,15 @@ datasetsApi.get('/', (req, res) => {
     res.status(200).json(datasets);
 });
 
+// Create a route and a handler for GET search all ids and names
+datasetsApi.get('/search', (req, res) => {
+    const ids = [];
+
+    // For each dataset, push its id and name in a response list
+    datasets.forEach((obj) => { ids.push({"id" : obj.id, "name": obj.name}); })
+    res.status(200).json(ids);
+});
+
 // Create a route and a handler for GET /datasets/:id
 // Could write an extra one that use req.query.id to use autocomplete for search
 datasetsApi.get('/:id', (req, res) => {
