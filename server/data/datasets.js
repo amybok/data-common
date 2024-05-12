@@ -19,11 +19,8 @@ const datasets = [
     method: "WGS",
     file_path: "WEHI Milton/vast/projects/PDC0001",
     owner: "WEHI",
-    code: [
-      { ipynb: "https://github.com/amybok/data-common" }, // jupyternote book
-      { r: "https://github.com/amybok/data-common" }, // R script
-      { py: "https://github.com/amybok/data-common" },
-    ], // python script]
+    code: [{ py: "PDC001.py" }], // python script]
+    template: [],
     portal: [{ cBioportal: "https://www.cbioportal.org/" }],
 
     linked_data: [
@@ -39,10 +36,8 @@ const datasets = [
     method: "Lattice Light Sheet",
     file_path: "path/path/path",
     owner: "WEHI",
-    code: [
-      { ipynb: "https://github.com/amybok/data-common" }, // jupyternote book
-      { py: "https://github.com/amybok/data-common" },
-    ], // python script]
+    code: [{ py: "PDC002.py" }], // python script]
+    template: [],
     portal: [{ cBioportal: "https://www.cbioportal.org/" }],
     linked_data: [{ PDC001: "WGS" }, { PDC005: "Spatial Omics Visium" }],
   },
@@ -55,9 +50,9 @@ const datasets = [
     file_path: "path/path/path",
     owner: "WEHI",
     code: [
-      { ipynb: "https://github.com/amybok/data-common" }, // jupyternote book
-      { r: "https://github.com/amybok/data-common" }, // R script
+      { py: "PDC003.py" }, // jupyternote book
     ], // python script]
+    template: [],
     portal: [
       { Aquila: "http://203.101.229.172:3838/aquila-portal/fake_aquila.html" },
     ],
@@ -72,9 +67,9 @@ const datasets = [
     file_path: "path/path/path",
     owner: "WEHI",
     code: [
-      // jupyternote book
-      { r: "https://github.com/amybok/data-common" }, // R script
+      { r: "DDC001.R" }, // R script
     ], // python script]
+    template: [{ r: "http://203.101.229.172:3838/code-template/" }],
     portal: [
       {
         "R Shiny": "http://203.101.229.172:3838/redcap-portal/",
@@ -95,8 +90,9 @@ const datasets = [
     file_path: "path/path/path",
     owner: "WEHI",
     code: [
-      { r: "https://github.com/amybok/data-common" }, // R script
-    ], // python script]
+      { r: "DDC002.R" }, // R script
+    ],
+    template: [{ r: "http://203.101.229.172:3838/code-template/" }],
     portal: [
       { "R Shiny": "http://203.101.229.172:3838/redcap-portal/" },
       {
@@ -114,8 +110,9 @@ const datasets = [
     file_path: "path/path/path",
     owner: "WEHI",
     code: [
-      { r: "https://github.com/amybok/data-common" }, // R script
-    ], // python script]
+      { r: "DDC003.R" }, // R script
+    ],
+    template: [{ r: "http://203.101.229.172:3838/code-template/" }],
     portal: [
       { "R Shiny": "http://203.101.229.172:3838/redcap-portal/" },
       {

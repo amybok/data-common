@@ -1,4 +1,5 @@
 import React from "react";
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
 const DataInfo = ({ data, main_id }) => {
@@ -23,11 +24,29 @@ const DataInfo = ({ data, main_id }) => {
     return newKey;
   };
 
-  //   const getRelData = (name) => {
-  //     let result;
-  //     data.map((item) => (item.id === name ? (result = item) : null));
-  //     return result;
-  //   };
+  // Setting up code for copy as well as copy logic
+  const [code, setCode] = useState("");
+
+  const getCode = async (scriptName) => {
+    try {
+      const response = await fetch(
+        `http://localhost:3001/api/code/${scriptName}`
+      );
+      const content = await response.text();
+
+      setCode(content);
+
+      console.log(code);
+
+      await navigator.clipboard.writeText(code);
+    } catch (error) {
+      console.error("Error fetching dataset:", error);
+    }
+  };
+
+  // useEffect(() => {
+  //   getCode();
+  // }, []);
 
   const style = {
     h2_title: {
@@ -116,7 +135,6 @@ const DataInfo = ({ data, main_id }) => {
 
   return (
     <>
-      {console.log(data)}
       {/* [data] is used to make json object into array for .map function to works */}
       {[data].map((item) =>
         //   Only load data of the correct id
@@ -173,9 +191,9 @@ const DataInfo = ({ data, main_id }) => {
                 >
                   <h3 style={style.h3_hyperlink}>Copy code for raw data</h3>
                   {item.code.map((item) => (
-                    <a href={Object.values(item)}>
-                      <button>{transformKeys(item)}</button>
-                    </a>
+                    <button onClick={() => getCode(Object.values(item))}>
+                      {transformKeys(item)}
+                    </button>
                   ))}
                 </div>
 
@@ -187,6 +205,11 @@ const DataInfo = ({ data, main_id }) => {
                   }}
                 >
                   <h3 style={style.h3_hyperlink}>Code template</h3>
+                  {item.template.map((item) => (
+                    <a href={Object.values(item)}>
+                      <button>{transformKeys(item)}</button>
+                    </a>
+                  ))}
                 </div>
 
                 <div
