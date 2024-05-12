@@ -31,7 +31,8 @@ const DataInfo = ({ data, main_id }) => {
 
   const style = {
     h2_title: {
-      fontFamily: "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+      fontFamily:
+        "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
       fontWeight: "500",
       paddingLeft: "0px",
       paddingTop: "30px",
@@ -146,6 +147,13 @@ const DataInfo = ({ data, main_id }) => {
                 className="dataset-hyperlinks"
               >
                 <div
+                  className="data-owner"
+                  style={{ marginTop: "20px", marginLeft: "20px" }}
+                >
+                  <h3 style={style.h3_hyperlink}>Owner</h3>
+                  <h4 style={style.h4}>{item.owner}</h4>
+                </div>
+                <div
                   className="raw-data-location"
                   style={{
                     marginTop: "20px",
@@ -169,6 +177,16 @@ const DataInfo = ({ data, main_id }) => {
                       <button>{transformKeys(item)}</button>
                     </a>
                   ))}
+                </div>
+
+                <div
+                  className="code-template"
+                  style={{
+                    marginTop: "20px",
+                    marginLeft: "20px",
+                  }}
+                >
+                  <h3 style={style.h3_hyperlink}>Code template</h3>
                 </div>
 
                 <div
