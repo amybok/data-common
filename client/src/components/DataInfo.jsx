@@ -1,4 +1,5 @@
 import React from "react";
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
 const DataInfo = ({ data, main_id }) => {
@@ -23,16 +24,37 @@ const DataInfo = ({ data, main_id }) => {
     return newKey;
   };
 
-//   const getRelData = (name) => {
-//     let result;
-//     data.map((item) => (item.id === name ? (result = item) : null));
-//     return result;
-//   };
+  // Setting up code for copy as well as copy logic
+  const [code, setCode] = useState("");
 
+  const getCode = async (scriptName) => {
+    try {
+      // const response = await fetch(
+      //   `http://localhost:3001/api/code/${scriptName}`
+      // );
+      const response = await fetch(
+        `http://115.146.86.176/api/code/${scriptName}`
+      );
+      const content = await response.text();
+
+      setCode(content);
+
+      console.log(code);
+
+      await navigator.clipboard.writeText(code);
+    } catch (error) {
+      console.error("Error fetching dataset:", error);
+    }
+  };
+
+  // useEffect(() => {
+  //   getCode();
+  // }, []);
 
   const style = {
     h2_title: {
-      fontFamily: "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+      fontFamily:
+        "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
       fontWeight: "500",
       paddingLeft: "0px",
       paddingTop: "30px",
@@ -116,7 +138,6 @@ const DataInfo = ({ data, main_id }) => {
 
   return (
     <>
-      {console.log(data)}
       {/* [data] is used to make json object into array for .map function to works */}
       {[data].map((item) =>
         //   Only load data of the correct id
@@ -147,6 +168,13 @@ const DataInfo = ({ data, main_id }) => {
                 className="dataset-hyperlinks"
               >
                 <div
+                  className="data-owner"
+                  style={{ marginTop: "20px", marginLeft: "20px" }}
+                >
+                  <h3 style={style.h3_hyperlink}>Owner</h3>
+                  <h4 style={style.h4}>{item.owner}</h4>
+                </div>
+                <div
                   className="raw-data-location"
                   style={{
                     marginTop: "20px",
@@ -166,6 +194,21 @@ const DataInfo = ({ data, main_id }) => {
                 >
                   <h3 style={style.h3_hyperlink}>Copy code for raw data</h3>
                   {item.code.map((item) => (
+                    <button onClick={() => getCode(Object.values(item))}>
+                      {transformKeys(item)}
+                    </button>
+                  ))}
+                </div>
+
+                <div
+                  className="code-template"
+                  style={{
+                    marginTop: "20px",
+                    marginLeft: "20px",
+                  }}
+                >
+                  <h3 style={style.h3_hyperlink}>Code template</h3>
+                  {item.template.map((item) => (
                     <a href={Object.values(item)}>
                       <button>{transformKeys(item)}</button>
                     </a>
