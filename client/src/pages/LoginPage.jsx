@@ -8,7 +8,7 @@ const LoginPage = () => {
     h1: {
       color: "white",
       textAlign: "center",
-      fontFamily: "Helvetica Neue",
+      fontFamily: "system-ui",
       fontWeight: "400",
       margin: "none",
       paddingTop: "50px",
@@ -17,7 +17,7 @@ const LoginPage = () => {
     h4: {
       color: "white",
       textAlign: "center",
-      fontFamily: "Helvetica Neue",
+      fontFamily: "system-ui",
       fontWeight: "300",
     },
 
