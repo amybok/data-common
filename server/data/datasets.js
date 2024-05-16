@@ -20,7 +20,9 @@ const datasets = [
     file_path: "WEHI Milton/vast/projects/PDC0001",
     owner: "WEHI",
     code: [{ ipynb: "PDC0001.py" }], // python script]
-    template: [],
+    template: [
+      { ipynb: "http://203.101.229.172:3838/data-portals/fake_jupyter.html" },
+    ],
     portal: [
       { cBioportal: "http://203.101.229.172:3838/data-portals/fake_cbio.html" },
     ],
@@ -39,7 +41,9 @@ const datasets = [
     file_path: "path/path/path",
     owner: "WEHI",
     code: [{ ipynb: "PDC0002.py" }], // python script]
-    template: [],
+    template: [
+      { ipynb: "http://203.101.229.172:3838/data-portals/fake_jupyter.html" },
+    ],
     portal: [
       { cBioportal: "http://203.101.229.172:3838/data-portals/fake_cbio.html" },
     ],
@@ -56,7 +60,9 @@ const datasets = [
     code: [
       { ipynb: "PDC0003.py" }, // jupyternote book
     ], // python script]
-    template: [{ ipynb: "https://jupyter.org/try-jupyter/lab/index.html" }],
+    template: [
+      { ipynb: "http://203.101.229.172:3838/data-portals/fake_jupyter.html" },
+    ],
     portal: [
       { Aquila: "http://203.101.229.172:3838/data-portals/fake_aquila.html" },
     ],
