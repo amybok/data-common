@@ -58,7 +58,7 @@ const SearchBox = () => {
 
         // (`http://115.146.86.176/api/datasets/${query}`) -- production url
         try {
-            const response = await fetch(`http://localhost:3001/api/datasets/search`);
+            const response = await fetch(`http://115.146.86.176/api/datasets/search`);
             console.log(response)
             const data = await response.json();
             console.log(data);
