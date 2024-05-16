@@ -29,6 +29,7 @@ const LoginPage = () => {
         backgroundImage: `url(${illustration})`,
         minHeight: "91vh",
         height: "auto",
+        minWidth: "100vw"
       }}
     >
       <div style={{ paddingTop: "120px" }}>
