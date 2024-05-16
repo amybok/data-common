@@ -19,7 +19,7 @@ const datasets = [
     method: "WGS",
     file_path: "WEHI Milton/vast/projects/PDC0001",
     owner: "WEHI",
-    code: [{ ipynb: "PDC0001.ipynb" }], // python script]
+    code: [{ ipynb: "PDC0001.py" }], // python script]
     template: [],
     portal: [{ cBioportal: "https://www.cbioportal.org/" }],
 
@@ -36,7 +36,7 @@ const datasets = [
     method: "Lattice Light Sheet",
     file_path: "path/path/path",
     owner: "WEHI",
-    code: [{ ipynb: "PDC0002.ipynb" }], // python script]
+    code: [{ ipynb: "PDC0002.py" }], // python script]
     template: [],
     portal: [{ cBioportal: "https://www.cbioportal.org/" }],
     linked_data: [{ PDC0001: "WGS" }, { PDC0005: "Spatial Omics Visium" }],
@@ -50,7 +50,7 @@ const datasets = [
     file_path: "path/path/path",
     owner: "WEHI",
     code: [
-      { ipynb: "PDC0003.ipynb" }, // jupyternote book
+      { ipynb: "PDC0003.py" }, // jupyternote book
     ], // python script]
     template: [{ ipynb: "https://jupyter.org/try-jupyter/lab/index.html" }],
     portal: [
