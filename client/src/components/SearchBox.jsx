@@ -46,7 +46,7 @@ const SearchBox = () => {
             paddingLeft:"0", 
             backgroundColor:"white", 
             margin:"0 0 0 0",
-            display:"none"
+            //display:"none"
         }
     }
 
