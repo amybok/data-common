@@ -214,7 +214,7 @@ const DataInfo = ({ data, main_id }) => {
                   }}
                 >
                   <h3 style={style.h3_hyperlink}>Code template</h3>
-                  {item.template.map((item) => (
+                  {[item].template.map((item) => (
                     <a href={Object.values(item)}>
                       <button>{transformKeys(item)}</button>
                     </a>
