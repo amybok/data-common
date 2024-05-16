@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 const DataTable = ({ data }) => {
   const style = {
     h2: {
-      fontFamily: "Helvetica Neue",
+      fontFamily: "system-ui",
       fontSize: "25px"
     },
 
