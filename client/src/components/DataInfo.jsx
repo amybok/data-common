@@ -29,13 +29,14 @@ const DataInfo = ({ data, main_id }) => {
 
   const getCode = async (scriptName) => {
     try {
-      // const response = await fetch(
-      //   `http://localhost:3001/api/code/${scriptName}`
-      // );
       const response = await fetch(
-        `http://115.146.86.176/api/code/${scriptName}`
+        `http://localhost:3001/api/code/${scriptName}`
       );
+      // const response = await fetch(
+      //   `http://115.146.86.176/api/code/${scriptName}`
+      // );
       const content = await response.text();
+      console.log(content);
 
       setCode(content);
     } catch (error) {
@@ -144,6 +145,7 @@ const DataInfo = ({ data, main_id }) => {
 
   return (
     <>
+      <script scr="dist/clipboard.min.js"></script>
       {/* [data] is used to make json object into array for .map function to works */}
       {[data].map((item) =>
         //   Only load data of the correct id
