@@ -38,18 +38,24 @@ const DataInfo = ({ data, main_id }) => {
       const content = await response.text();
 
       setCode(content);
-
-      console.log(code);
-
-      await navigator.clipboard.writeText(code);
     } catch (error) {
       console.error("Error fetching dataset:", error);
     }
   };
 
-  // useEffect(() => {
-  //   getCode();
-  // }, []);
+  useEffect(() => {
+    if (code) {
+      const copyToClipboard = async () => {
+        try {
+          await navigator.clipboard.writeText(code);
+          console.log("Code copied to clipboard: ", code);
+        } catch (error) {
+          console.error("Error copying code to clipboard: ", error);
+        }
+      };
+      copyToClipboard();
+    }
+  }, [code]);
 
   const style = {
     h2_title: {
