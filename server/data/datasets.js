@@ -21,7 +21,9 @@ const datasets = [
     owner: "WEHI",
     code: [{ ipynb: "PDC0001.py" }], // python script]
     template: [],
-    portal: [{ cBioportal: "https://www.cbioportal.org/" }],
+    portal: [
+      { cBioportal: "http://203.101.229.172:3838/data-portals/fake_cbio.html" },
+    ],
 
     linked_data: [
       { PDC002: "Lattice Light Sheet" },
@@ -38,7 +40,9 @@ const datasets = [
     owner: "WEHI",
     code: [{ ipynb: "PDC0002.py" }], // python script]
     template: [],
-    portal: [{ cBioportal: "https://www.cbioportal.org/" }],
+    portal: [
+      { cBioportal: "http://203.101.229.172:3838/data-portals/fake_cbio.html" },
+    ],
     linked_data: [{ PDC0001: "WGS" }, { PDC0005: "Spatial Omics Visium" }],
   },
   {
@@ -54,7 +58,7 @@ const datasets = [
     ], // python script]
     template: [{ ipynb: "https://jupyter.org/try-jupyter/lab/index.html" }],
     portal: [
-      { Aquila: "http://203.101.229.172:3838/aquila-portal/fake_aquila.html" },
+      { Aquila: "http://203.101.229.172:3838/data-portals/fake_aquila.html" },
     ],
     linked_data: [],
   },
@@ -79,7 +83,10 @@ const datasets = [
           "https://redcap.wehi.edu.au/redcap_v14.3.9/ProjectSetup/index.php?pid=658",
       },
     ],
-    linked_data: [],
+    linked_data: [
+      { DDC0002: "Diabetes in Melbourne" },
+      { DDC0003: "Non-standard dataset" },
+    ],
   },
   {
     id: "DDC0002",
@@ -100,7 +107,10 @@ const datasets = [
           "https://redcap.wehi.edu.au/redcap_v14.3.9/ProjectSetup/index.php?pid=656",
       },
     ],
-    linked_data: ["PDC001", "PDC002"],
+    linked_data: [
+      { DDC0001: "Ischemic Heart Disease in Melbourne" },
+      { DDC0003: "Non-standard dataset" },
+    ],
   },
   {
     id: "DDC0003",
@@ -120,7 +130,10 @@ const datasets = [
           "https://redcap.wehi.edu.au/redcap_v14.3.9/ProjectSetup/index.php?pid=657",
       },
     ],
-    linked_data: ["PDC001", "PDC002"],
+    linked_data: [
+      { DDC0001: "Ischemic Heart Disease in Melbourne" },
+      { DDC0002: "Diabetes in Melbourne" },
+    ],
   },
 ];
 
