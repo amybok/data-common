@@ -79,7 +79,7 @@ const datasets = [
     code: [
       { r: "DDC0001.R" }, // R script
     ], // python script]
-    template: [{ r: "http://203.101.229.172:3838/code-template/" }],
+    template: [{ r: "http://203.101.229.172:3838/code-template/ddc0001" }],
     portal: [
       {
         "R Shiny": "http://203.101.229.172:3838/redcap-portal/",
@@ -105,7 +105,7 @@ const datasets = [
     code: [
       { r: "DDC0002.R" }, // R script
     ],
-    template: [{ r: "http://203.101.229.172:3838/code-template/" }],
+    template: [{ r: "http://203.101.229.172:3838/code-template/ddc0002" }],
     portal: [
       { "R Shiny": "http://203.101.229.172:3838/redcap-portal/" },
       {
@@ -128,7 +128,7 @@ const datasets = [
     code: [
       { r: "DDC0003.R" }, // R script
     ],
-    template: [{ r: "http://203.101.229.172:3838/code-template/" }],
+    template: [{ r: "http://203.101.229.172:3838/code-template/ddc0003" }],
     portal: [
       { "R Shiny": "http://203.101.229.172:3838/redcap-portal/" },
       {
