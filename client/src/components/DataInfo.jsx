@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import Download from "../components/Download";
 
 const DataInfo = ({ data, main_id }) => {
   // Function to transform file type to their actual name. i.e. ipynb -> Jupyter notebook
@@ -121,8 +122,8 @@ const DataInfo = ({ data, main_id }) => {
       marginTop: "20px",
       fontFamily: "system-ui",
       fontWeight: "300",
-      paddingRight: "40px",
-      paddingLeft: "40px",
+      paddingRight: "20px",
+      paddingLeft: "20px",
       paddingTop: "10px",
       paddingBottom: "20px",
       boxShadow: "0px 5px 10px 0px rgba(0,0,0,0.5)",
@@ -177,10 +178,13 @@ const DataInfo = ({ data, main_id }) => {
               >
                 <div
                   className="data-owner"
-                  style={{ marginTop: "20px", marginLeft: "20px" }}
+                  style={{ marginTop: "20px", marginLeft: "20px"}}
                 >
                   <h3 style={style.h3_hyperlink}>Owner</h3>
-                  <h4 style={style.h4}>{item.owner}</h4>
+                  <div style={{display:"flex", justifyContent:"space-between"}}>
+                    <h4 style={style.h4}>{item.owner}</h4>
+                    <Download></Download>
+                  </div>
                 </div>
                 <div
                   className="raw-data-location"
