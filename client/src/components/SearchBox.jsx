@@ -68,6 +68,7 @@ const SearchBox = () => {
         let cancel = false;
 
         if (query == ''){
+            setSearchResults.filter([])
             return
         }
 
