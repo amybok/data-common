@@ -39,14 +39,24 @@ const SearchBox = () => {
             width:"290px",
             marginTop:"2.5px",
             marginBottom:"2.5px",
-            borderTop: "1px solid rgb(221 221 221)"
+            borderTop: "1px solid rgb(221 221 221)",
+            overflow:"clip"
         },
 
         dropdown: {
             paddingLeft:"0", 
             backgroundColor:"white", 
             margin:"0 0 0 0",
+            borderRadius:"8px",
             //display:"none"
+        },
+
+        container:{
+            fontFamily:"Helvetica", 
+            fontWeight:"300", 
+            paddingLeft:"5px", 
+            paddingRight:"5px",
+            position:"absolute",
         }
     }
 
@@ -74,12 +84,12 @@ const SearchBox = () => {
     }
 
     return (
-            <div className="wrapper" style={{border:"1px solid grey", borderRadius:"9.70px"}}>
+            <div className="wrapper" style={{border:"1px solid grey", borderRadius:"9.70px", position:"relative"}}>
                 <input placeholder="Search" style={style.searchbox} type="text" onChange={handleSearchChange} value={searchTerm}/>
-                    <div className="results-container" style={{fontFamily:"Helvetica", fontWeight:"300", paddingLeft:"5px", paddingRight:"5px"}}>
+                    <div className="results-container" style={style.container}>
                         {console.log(searchResults)}
                         {console.log(filtered)}
-                        <ul style={style.dropdown}>
+                        <ul style={style.dropdown} overflow>
                             {filtered.map(obj => 
                                 <div className="results" style={style.results}>
                                     <NavLink to={`/view/${obj.id}`} key={obj.id} style={{textDecoration:"none"}}>{obj.name}</NavLink>
