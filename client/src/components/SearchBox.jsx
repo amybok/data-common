@@ -64,14 +64,18 @@ const SearchBox = () => {
     const handleSearchChange = async (e) => {
         const query = e.target.value;
         setSearchTerm(query);
+        console.log(query)
         let cancel = false;
+
+        if (query == ''){
+            return
+        }
 
         // (`http://115.146.86.176/api/datasets/${query}`) -- production url
         try {
-            const response = await fetch(`http://115.146.86.176/api/datasets/search`);
-            console.log(response)
+            const response = await fetch(`http://localhost:3001/api/datasets/search`);
             const data = await response.json();
-            console.log(data);
+            console.log(data)
             if (cancel) return
             setSearchResults(data);
 
