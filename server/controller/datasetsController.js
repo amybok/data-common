@@ -69,7 +69,7 @@ datasetsApi.post("/", jsonParser, async (req, res) => {
         datasets.push(newDataset);
 
         // Send a 201 status code and the new dataset as a JSON response
-        res.status(201).json(newDataset);
+        res.status(201).send(newDataset);
     }
     else {
         // If the data is invalid, send a 400 status code and a message
