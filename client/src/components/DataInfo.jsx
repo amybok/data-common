@@ -30,9 +30,7 @@ const DataInfo = ({ data, main_id }) => {
 
   const getCode = async (scriptName) => {
     try {
-      // const response = await fetch(
-      //   `http://localhost:3001/api/code/${scriptName}`
-      // );
+      // `http://localhost:3001/api/code/${scriptName}`
       const response = await fetch(
         `http://115.146.86.176/api/code/${scriptName}`
       );

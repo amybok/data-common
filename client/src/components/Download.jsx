@@ -13,7 +13,7 @@ const Download = () => {
     let owner = ""
 
     const getOwner = async () => {
-        const response = await fetch(`http://localhost:3001/api/datasets/${id}`)
+        const response = await fetch(`http://115.146.86.176/api/datasets/${id}`)
         const dataset = await response.json()
         //console.log(dataset.owner)
         owner = dataset.owner
@@ -21,9 +21,24 @@ const Download = () => {
         const text2 = "The raw data is located at ";
         content = text.concat(window.location.href,'. ', text2, owner)
         console.log(content)
+
+        download("README.txt", content)
     }
 
+    function download(filename, text) {
+        var element = document.createElement('a');
+        element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+        element.setAttribute('download', filename);
     
+        element.style.display = 'none';
+        document.body.appendChild(element);
+    
+        element.click();
+    
+        document.body.removeChild(element);
+    }
+
+    // need to write to a txt file and then produce for download
 
     return (
         <div>
