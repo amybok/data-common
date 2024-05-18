@@ -89,6 +89,26 @@ const RegistrationTable = () => {
 
     }
 
+    function download(id, owner) {
+        var element = document.createElement('a');
+
+        const text1 = "This dataset is part of the data registry. For more information, visit: ";
+        const text2 = "The raw data is located at ";
+
+        const content = text1.concat("http://115.146.86.176/view/",id,'. ', text2, owner,'.')
+
+
+        element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(content));
+        element.setAttribute('download', 'README.txt');
+    
+        element.style.display = 'none';
+        document.body.appendChild(element);
+    
+        element.click();
+    
+        document.body.removeChild(element);
+    }
+
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -106,6 +126,10 @@ const RegistrationTable = () => {
             
             if (response.status == "201"){
                 setRes("Dataset registration success")
+                
+
+                const id = response.json().then(data => (download(data.id, data.owner)))
+
             }
             else {
                 setRes("Failed to register dataset")
