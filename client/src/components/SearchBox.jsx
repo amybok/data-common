@@ -36,11 +36,8 @@ const SearchBox = () => {
 
         results: {
             marginTop: "0",
-            width:"290px",
-            marginTop:"2.5px",
-            marginBottom:"2.5px",
+            width:"300px",
             borderTop: "1px solid rgb(221 221 221)",
-            overflow:"clip"
         },
 
         dropdown: {
@@ -54,9 +51,17 @@ const SearchBox = () => {
         container:{
             fontFamily:"Helvetica", 
             fontWeight:"300", 
-            paddingLeft:"5px", 
-            paddingRight:"5px",
             position:"absolute",
+            borderLeft: "1px solid rgb(221 221 221)",
+            borderRight: "1px solid rgb(221 221 221)",
+            borderBottom:"1px solid rgb(221 221 221)",
+            borderRadius:"8px",
+            boxShadow: "0px 5px 5px 0px rgba(0,0,0,0.2)",
+        },
+
+        text:{
+            textDecoration:"none",
+            paddingLeft:"5px"
         }
     }
 
@@ -68,8 +73,8 @@ const SearchBox = () => {
         let cancel = false;
 
         if (query == ''){
-            setFiltered([])
-            return
+            setSearchResults([])
+            return 
         }
 
         // (`http://115.146.86.176/api/datasets/${query}`) -- production url
@@ -89,7 +94,7 @@ const SearchBox = () => {
     }
 
     return (
-            <div className="wrapper" style={{border:"1px solid grey", borderRadius:"9.70px", position:"relative"}}>
+            <div className="wrapper" style={{border:"1px solid grey", borderRadius:"9.70px", position:"relative", zIndex:"20"}}>
                 <input placeholder="Search" style={style.searchbox} type="text" onChange={handleSearchChange} value={searchTerm}/>
                     <div className="results-container" style={style.container}>
                         {console.log(searchResults)}
@@ -97,7 +102,7 @@ const SearchBox = () => {
                         <ul style={style.dropdown} overflow>
                             {filtered.map(obj => 
                                 <div className="results" style={style.results}>
-                                    <NavLink to={`/view/${obj.id}`} key={obj.id} style={{textDecoration:"none"}}>{obj.name}</NavLink>
+                                    <NavLink to={`/view/${obj.id}`} key={obj.id} style={style.text}>{obj.name}</NavLink>
                                 </div>)}
                         </ul>
                     </div>
