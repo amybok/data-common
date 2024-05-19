@@ -56,7 +56,7 @@ datasetsApi.post("/", jsonParser, async (req, res) => {
 
     // Validate the data
     if (data.name && data.method) {
-        const newId = "PDC00" + (datasets.length + 1);
+        const newId = "PDC000" + (datasets.length + 1);
         const newDataset = {"id": newId, 
                             "name" : data.name, 
                             "description": data.description, 
@@ -69,7 +69,7 @@ datasetsApi.post("/", jsonParser, async (req, res) => {
         datasets.push(newDataset);
 
         // Send a 201 status code and the new dataset as a JSON response
-        res.status(201).json(newDataset);
+        res.status(201).send(newDataset);
     }
     else {
         // If the data is invalid, send a 400 status code and a message
