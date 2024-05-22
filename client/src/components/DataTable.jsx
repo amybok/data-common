@@ -79,7 +79,7 @@ const DataTable = ({ data }) => {
 
       </caption>
 
-      <div style={{overflow:"scroll", height:"555px", borderRadius:"5px"}}>
+      <div style={{overflowY:"scroll", height:"555px", borderRadius:"5px"}}>
         <table style={style.table}>
           <thead style={{position:"sticky", top:"0"}}>
             <tr>
