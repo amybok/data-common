@@ -11,7 +11,7 @@ portal = input("Portals: ")
 
 headers = {'ContentType': 'application/json'}
 
-location = "http://115.146.86.176/api/datasets"
+location = "http://localhost:3001/api/datasets"
 
 data = {"name": name, "description": description, "method": method, "file_path": file_path, "owner": owner}
 
@@ -22,7 +22,7 @@ if response.status_code == 201:
     received = response.json()
     f = open("README.txt" , "w+")
     f.write("This dataset is part of the data registry. For more information, visit: ")
-    f.write("http://115.146.86.176/view/")
+    f.write("http://localhost:3001/view/")
     f.write(received["id"])
     f.write(". ")
     f.write("The raw data is located at ")

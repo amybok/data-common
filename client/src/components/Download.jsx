@@ -13,7 +13,7 @@ const Download = () => {
     let owner = ""
 
     const getOwner = async () => {
-        const response = await fetch(`http://115.146.86.176/api/datasets/${id}`)
+        const response = await fetch(`http://localhost:3001/api/datasets/${id}`)
         const dataset = await response.json()
         //console.log(dataset.owner)
         owner = dataset.owner

@@ -32,7 +32,7 @@ const DataInfo = ({ data, main_id }) => {
     try {
       // `http://localhost:3001/api/code/${scriptName}`
       const response = await fetch(
-        `http://115.146.86.176/api/code/${scriptName}`
+        `http://localhost:3001/api/code/${scriptName}`
       );
       const content = await response.text();
       console.log(content);
