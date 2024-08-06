@@ -6,6 +6,8 @@ Repository containing code for React frontend with Vite, Node and Express.js bac
 
 Check wiki for documentation and troubleshooting
 
+To see a demo, visit the vercel app from deployment
+
 To run: clone this repo
 
 ```
