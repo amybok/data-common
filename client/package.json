@@ -2,7 +2,7 @@
   "name": "react-router-budget",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://amybok.github.io/data-common",
+  "homepage": "https://amybok.github.io/",
   "type": "module",
   "scripts": {
     "dev": "vite",
