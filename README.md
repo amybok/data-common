@@ -4,6 +4,8 @@ Project Research Data Common - a register to track relevant data portals, inform
 
 Repository containing code for React frontend with Vite, Node and Express.js backend
 
+To see a demo, visit the vercel app from deployment
+
 Check wiki for documentation and troubleshooting
 
 To run: clone this repo
