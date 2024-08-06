@@ -79,7 +79,7 @@ const SearchBox = () => {
 
         // (`http://115.146.86.176/api/datasets/${query}`) -- production url
         try {
-            const response = await fetch(`http://localhost:3001/api/datasets/search`);
+            const response = await fetch(`https://${import.meta.env.VITE_APP_API_URL}/api/datasets/search`);
             const data = await response.json();
             console.log(data)
             if (cancel) return

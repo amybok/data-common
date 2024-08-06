@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import Download from "../components/Download";
+import.meta.env.VITE_APP_API_URL
 
 const DataInfo = ({ data, main_id }) => {
   // Function to transform file type to their actual name. i.e. ipynb -> Jupyter notebook
@@ -32,7 +33,8 @@ const DataInfo = ({ data, main_id }) => {
     try {
       // `http://localhost:3001/api/code/${scriptName}`
       const response = await fetch(
-        `http://localhost:3001/api/code/${scriptName}`
+        `https://${import.meta.env.VITE_APP_API_URL}/api/code/${scriptName}`
+        // `http://localhost:3001/api/code/${scriptName}`
       );
       const content = await response.text();
       console.log(content);

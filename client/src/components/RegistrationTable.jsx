@@ -95,7 +95,7 @@ const RegistrationTable = () => {
         const text1 = "This dataset is part of the data registry. For more information, visit: ";
         const text2 = "The raw data is located at ";
 
-        const content = text1.concat("http://localhost:3001/view/",id,'. ', text2, owner,'.')
+        const content = text1.concat("https://"+VITE_APP_API_URL+"/view/",id,'. ', text2, owner,'.')
 
 
         element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(content));
@@ -116,7 +116,7 @@ const RegistrationTable = () => {
         console.log(formData);
 
         // (`http://115.146.86.176/api/datasets`) -- production url
-        fetch("http://localhost:3001/api/datasets", {
+        fetch(`https://${import.meta.env.VITE_APP_API_URL}/api/datasets`, {
             method: "POST",
             headers: { "Content-Type": "application/json"},
             body: JSON.stringify(formData)

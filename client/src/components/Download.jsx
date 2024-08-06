@@ -13,7 +13,7 @@ const Download = () => {
     let owner = ""
 
     const getOwner = async () => {
-        const response = await fetch(`http://localhost:3001/api/datasets/${id}`)
+        const response = await fetch(`https://${import.meta.env.VITE_APP_API_URL}/api/datasets/${id}`)
         const dataset = await response.json()
         //console.log(dataset.owner)
         owner = dataset.owner
