@@ -1,3 +1,7 @@
+To test register new dataset, check upload.py, if there's issue, check path for correct path, should be localhost if local.
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
