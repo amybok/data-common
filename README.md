@@ -9,6 +9,7 @@ This repository includes:
 
 ### Demo  
 Check out the live demo: [WEHI Data Commons](https://data-commons.vercel.app)
+This webapp was initially deployed on ARDC research cloud's Ubuntu VM using Nginx reverse proxy and pm2 process management
 
 ### Getting Started  
 
