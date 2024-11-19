@@ -8,8 +8,9 @@ This repository includes:
 - **Backend**: Powered by [Node.js](https://nodejs.org/) and [Express.js](https://expressjs.com/) for robust API handling.
 
 ### Demo  
-Check out the live demo: [WEHI Data Commons](https://data-commons.vercel.app)
-This webapp was initially deployed on ARDC research cloud's Ubuntu VM using Nginx reverse proxy and pm2 process management
+Check out the live demo: [WEHI Data Commons](https://data-commons.vercel.app).
+
+This webapp was initially deployed on ARDC research cloud's Ubuntu VM using Nginx reverse proxy and pm2 process management.
 
 ### Getting Started  
 
