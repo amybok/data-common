@@ -33,7 +33,7 @@ const DataInfo = ({ data, main_id }) => {
     try {
       // `http://localhost:3001/api/code/${scriptName}`
       const response = await fetch(
-        `https://${import.meta.env.VITE_APP_API_URL}/api/code/${scriptName}`
+        `http://${import.meta.env.VITE_APP_API_URL}/api/code/${scriptName}`
         // `http://localhost:3001/api/code/${scriptName}`
       );
       const content = await response.text();
