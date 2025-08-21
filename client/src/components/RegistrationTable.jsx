@@ -116,7 +116,7 @@ const RegistrationTable = () => {
         console.log(formData);
 
         // (`http://115.146.86.176/api/datasets`) -- production url
-        fetch(`https://${import.meta.env.VITE_APP_API_URL}/api/datasets`, {
+        fetch(`http://${import.meta.env.VITE_APP_API_URL}/api/datasets`, {
             method: "POST",
             headers: { "Content-Type": "application/json"},
             body: JSON.stringify(formData)
@@ -144,7 +144,7 @@ const RegistrationTable = () => {
     
     
     return (
-        <div style={{display:"flex", justifyContent:"space-around"}}>
+        <div style={{display:"flex", justifyContent:"space-around", marginTop: "90px"}}>
             {/*<form onSubmit={handleSubmit} style={style.form}>*/}
             <form style={style.form} onSubmit={handleSubmit} onReset={handleReset}>
 

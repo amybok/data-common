@@ -69,7 +69,7 @@ const DataTable = ({ data }) => {
 
   return (
 
-    <div>
+    <div style={{marginTop:"90px"}}>
       <caption style={style.caption}>
         <div style={style.h2}>All Dataset</div>
 

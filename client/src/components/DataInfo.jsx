@@ -65,8 +65,8 @@ const DataInfo = ({ data, main_id }) => {
         "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
       fontWeight: "500",
       paddingLeft: "0px",
-      paddingTop: "30px",
-      paddingBottom: "20px",
+      marginTop: "90px",
+      marginBottom: "5px",
     },
 
     h3: {
