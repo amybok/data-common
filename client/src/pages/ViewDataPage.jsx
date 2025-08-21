@@ -41,7 +41,7 @@ const ViewPage = () => {
     try {
       //http://115.146.86.176/api/datasets/${id}
       // const response = await fetch(`http://115.146.86.176/api/datasets/${id}`);
-      const response = await fetch(`http://${import.meta.env.VITE_APP_API_URL}/api/datasets/${id}`);
+      const response = await fetch(`https://${import.meta.env.VITE_APP_API_URL}/api/datasets/${id}`);
       const fetched_data = await response.json();
       setData(fetched_data);
     } catch (error) {

@@ -116,7 +116,7 @@ const RegistrationTable = () => {
         console.log(formData);
 
         // (`http://115.146.86.176/api/datasets`) -- production url
-        fetch(`http://${import.meta.env.VITE_APP_API_URL}/api/datasets`, {
+        fetch(`https://${import.meta.env.VITE_APP_API_URL}/api/datasets`, {
             method: "POST",
             headers: { "Content-Type": "application/json"},
             body: JSON.stringify(formData)
