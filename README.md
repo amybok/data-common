@@ -1,4 +1,4 @@
-## WEHI Data Commons Project - May 2024
+## WEHI Data Commons Project
 
 Project Research Data Common - a register to track relevant data portals, information and research for cells dataset
 
