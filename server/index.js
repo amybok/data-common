@@ -6,8 +6,8 @@ import datasets from "./data/datasets.js"
 
 const app = express();
 app.use(cors({
-    origin: "http://localhost:5173",
-    methods: "GET,HEAD,PUT,P"
+    origin: ["https://data-commons.vercel.app", "https://data-commons.vercel.app/api"],
+    methods: "GET,HEAD,PUT,POST"
 }))
 
 app.use("/api", api);

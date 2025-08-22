@@ -14,7 +14,7 @@ const DatasetPage = () => {
     try {
       // "http://115.146.86.176/api/datasets" -- production
       // const response = await fetch("http://115.146.86.176/api/datasets");
-      const response = await fetch("http://localhost:3001/api/datasets");
+      const response = await fetch(`https://${import.meta.env.VITE_APP_API_URL}/api/datasets`);
       const data = await response.json();
       console.log(data);
       setData(data);
